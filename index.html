@@ -36,7 +36,7 @@
     <!-- adding the main js file -->
     <script src="portfolio.js" defer></script>
   </head>
-  <body>
+  <body class="blue">
     <!-- Headeer Site -------------------------------->
     <header>
       <div id="logo">
@@ -50,9 +50,10 @@
         <a href="#skills" style="--i: 3">Skills</a>
         <a href="#portfolio" style="--i: 4">portfolio</a>
         <a href="#contact" style="--i: 5">Contact</a>
-        <div class="mode">
+        <label class="mode" for="modeInput" id="modeLabel">
           <i class="bx bxs-moon"></i>
-        </div>
+        </label>
+        <input type="checkbox" id="modeInput" />
       </nav>
       <div id="menu-icon" class="bx bx-menu-alt-right fromright"></div>
     </header>
@@ -93,16 +94,24 @@
         </div>
       </div>
       <div class="home-image scrollScale">
-        <div class="img-box">
-          <img class="myPhotos" src="./me 2/kam.png" alt="" />
-        </div>
+        <canvas
+          id="canv"
+          class="myPhotos"
+          width="320px"
+          height="500px"
+        ></canvas>
       </div>
     </section>
 
     <!-- about section ---------------------------------->
     <section id="about">
       <div class="img-about">
-        <img class="myPhotos" src="./me 2/kam.png" alt="" />
+        <canvas
+          id="secCanv"
+          class="myPhotos"
+          width="320px"
+          height="500px"
+        ></canvas>
       </div>
       <div class="about-content scrollScale">
         <span>Let me intteoduce myself</span>
@@ -232,7 +241,7 @@
             Send Message <i class="bx bx-send"></i>
           </button>
           <div class="contactMessageplace">
-            <p id="contactMessage"></p>
+            <p id="contactMessage">delet me</p>
           </div>
         </form>
       </div>
@@ -274,21 +283,15 @@
     </footer>
 
     <!-- Theme Settings -->
+    <div id="displaiedpage"></div>
     <div class="theamSettings">
       <div class="togglebtn">
         <i class="bx bxs-cog"></i>
       </div>
       <div class="wrapper">
-        <h3>Colors</h3>
+        <h3>chose your color</h3>
         <div id="colorsDev">
           <!-- this Divs field filled by JS () -->
-          <!-- <div class="colorBox" style="--color: #025ac9 "></div>
-          <div class="colorBox" style="--color: #02c95a "></div>
-          <div class="colorBox" style="--color: #c9025a "></div>
-          <div class="colorBox" style="--color: #5a02c9 "></div>
-          <label for="colorPicker" class="colorBox">
-            <input type="color" id="colorPicker" />
-          </label> -->
         </div>
       </div>
     </div>

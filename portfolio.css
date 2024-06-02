@@ -1,61 +1,64 @@
-/* ///////////////  import fonts & global rules  /////////////// */
+/* ///////////////  import fonts   /////////////// */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
 :root {
   --text-color: #001a44;
-  --text-porto-color:#02b2df;
+  --text-porto-color: #02b2df;
   --text-simi-ten-color: #232f42;
-  --hover-color: rgb(2, 90, 201);
+  --hover-color: #025ac9;
   --bg-color: #a5cfe5;
   --header-bg-color: #a5cfe5b6;
   --menu-bg-color: #a5cfe5c8;
   --secon-bg-color: #cce0ff;
-  --mail-bg-color:#003;
-  --input-color:#02e1ffc4;
-  --input-plholder-color:#02e1ff5b;
-  --points-color:#012661;
-  --neon-social:0 0 5px #025ac9;
-  --header-hover: 0 0 10px rgba(2, 170, 255, 0.6), 0 0 20px rgba(2, 170, 255, 0.6),
-  0 0 30px rgba(2, 170, 255, 0.6), 0 0 40px rgba(2, 170, 255, 0.6),
-  0 0 70px rgba(2, 170, 255, 0.6), 0 0 80px rgba(2, 170, 255, 0.6),
-  0 0 100px rgba(2, 170, 255, 0.6), 0 0 150px rgba(2, 170, 255, 0.6);
+  --mail-bg-color: #003;
+  --input-color: #02e1ffc4;
+  --input-plholder-color: #02e1ff5b;
+  --points-color: #012661;
+  --neon-social: 0 0 5px #025ac9;
+  --header-hover: 0 0 10px #02aaff99, 0 0 20px rgba(2, 170, 255, 0.6),
+    0 0 30px rgba(2, 170, 255, 0.6), 0 0 40px rgba(2, 170, 255, 0.6),
+    0 0 70px rgba(2, 170, 255, 0.6), 0 0 80px rgba(2, 170, 255, 0.6),
+    0 0 100px rgba(2, 170, 255, 0.6), 0 0 150px rgba(2, 170, 255, 0.6);
   --big-font: 3.5rem;
   --normal-font: 2rem;
   --animationText-font: 2.5rem;
   --h3-font: 1.5rem;
   --hover-box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px,
     rgba(0, 0, 0, 0.23) 0 6px 6px;
-    --neon-box-shadow: 0 0 10px #025ac9;
-  --font-neon-text-shadow: 0 0 10px rgba(2, 90, 201, 0.3),
-    0 0 20px rgba(2, 90, 201, 0.3), 0 0 30px rgba(2, 90, 201, 0.3),
-    0 0 40px rgba(2, 90, 201, 0.3), 0 0 70px rgba(2, 90, 201, 0.3),
-    0 0 80px rgba(2, 90, 201, 0.3), 0 0 100px rgba(2, 90, 201, 0.3),
-    0 0 150px rgba(2, 90, 201, 0.3);
+  --neon-box-shadow: 0 0 10px #025ac9;
+  --neon-box-colors-shadow: 0 0 2rem #023dff;
+  --font-neon-text-shadow: 0 0 10px #025ac94d, 0 0 20px rgba(2, 90, 201, 0.3),
+    0 0 30px rgba(2, 90, 201, 0.3), 0 0 40px rgba(2, 90, 201, 0.3),
+    0 0 70px rgba(2, 90, 201, 0.3), 0 0 80px rgba(2, 90, 201, 0.3),
+    0 0 100px rgba(2, 90, 201, 0.3), 0 0 150px rgba(2, 90, 201, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
     #02e1ff 0%,
     #0275ff 51%,
     #023dff 100%
-    );
+  );
 }
-.green{
+
+/* ///////////////  all colors versions  /////////////// */
+.green {
   --text-color: #012107;
-  --text-porto-color:#02df5e;
+  --text-porto-color: #02df5e;
   --text-simi-ten-color: #244b36;
   --hover-color: #03ad50;
   --bg-color: #c7ffe1;
-  --secon-bg-color: #e8ffe7;
-  --menu-bg-color: #c7ffe1c8;
-  --mail-bg-color:#020;
-  --neon-social:0 0 5px #02c95a;
-  --input-color:#02ffe1c4;
-  --input-plholder-color:#02ffe15b;
-  --points-color:#013116;
   --header-bg-color: #c7ffe1b6;
+  --menu-bg-color: #c7ffe1c8;
+  --secon-bg-color: #e8ffe7;
+  --mail-bg-color: #020;
+  --neon-social: 0 0 5px #02c95a;
+  --input-color: #17ff02;
+  --input-plholder-color: #3dff025b;
+  --points-color: #013116;
   --header-hover: 0 0 10px #19bb8599, 0 0 20px rgba(25, 187, 133, 0.6),
-  0 0 30px rgba(25, 187, 133, 0.6), 0 0 40px rgba(25, 187, 133, 0.6),
-  0 0 70px rgba(25, 187, 133, 0.6), 0 0 80px rgba(25, 187, 133, 0.6),
-  0 0 100px rgba(25, 187, 133, 0.6), 0 0 150px rgba(25, 187, 133, 0.6);
-  --neon-box-shadow: 0 0 10px rgb(2, 201, 90);
+    0 0 30px rgba(25, 187, 133, 0.6), 0 0 40px rgba(25, 187, 133, 0.6),
+    0 0 70px rgba(25, 187, 133, 0.6), 0 0 80px rgba(25, 187, 133, 0.6),
+    0 0 100px rgba(25, 187, 133, 0.6), 0 0 150px rgba(25, 187, 133, 0.6);
+  --neon-box-shadow: 0 0 10px #02c95a;
+  --neon-box-colors-shadow: 0 0 2rem #0bac20;
   --font-neon-text-shadow: 0 0 10px rgba(2, 201, 90, 0.3),
     0 0 20px rgba(2, 201, 90, 0.3), 0 0 30px rgba(2, 201, 90, 0.3),
     0 0 40px rgba(2, 201, 90, 0.3), 0 0 70px rgba(2, 201, 90, 0.3),
@@ -66,27 +69,29 @@
     #3fc002 0%,
     #0bac20 51%,
     #0e570b 100%
-    );
+  );
 }
-.mauve{
+.purple {
   --text-color: #220249;
-  --text-porto-color:#8052ec;
+  --text-porto-color: #8052ec;
   --text-simi-ten-color: #34056d;
   --hover-color: #5a02c9;
   --secon-bg-color: #cdc6df;
   --bg-color: #beafe0;
   --menu-bg-color: #beafe0c8;
   --header-bg-color: #beafe0b6;
-  --mail-bg-color:#180035;
-  --neon-social:0 0 5px #5a02c9;
-  --input-color:#6a0ae0c4;
-  --input-plholder-color:#6c0edf5b;
-  --points-color:#210741;
-  --header-hover: 0 0 10px rgba(92, 2, 201, 0.45), 0 0 20px rgba(90, 2, 201, 0.45),
-  0 0 30px rgba(90, 2, 201, 0.45), 0 0 40px rgba(90, 2, 201, 0.45),
-  0 0 70px rgba(90, 2, 201, 0.45), 0 0 80px rgba(90, 2, 201, 0.45),
-  0 0 100px rgba(90, 2, 201, 0.45), 0 0 150px rgba(90, 2, 201, 0.45);
-  --neon-box-shadow: 0 0 10px rgb(90, 2, 201);
+  --mail-bg-color: #180035;
+  --neon-social: 0 0 5px #5a02c9;
+  --input-color: #8400ff;
+  --input-plholder-color: #6c0edf5b;
+  --points-color: #210741;
+  --header-hover: 0 0 10px rgba(92, 2, 201, 0.45),
+    0 0 20px rgba(90, 2, 201, 0.45), 0 0 30px rgba(90, 2, 201, 0.45),
+    0 0 40px rgba(90, 2, 201, 0.45), 0 0 70px rgba(90, 2, 201, 0.45),
+    0 0 80px rgba(90, 2, 201, 0.45), 0 0 100px rgba(90, 2, 201, 0.45),
+    0 0 150px rgba(90, 2, 201, 0.45);
+  --neon-box-shadow: 0 0 10px #5a02c9;
+  --neon-box-colors-shadow: 0 0 2rem #5a02c9;
   --font-neon-text-shadow: 0 0 10px rgba(90, 2, 201, 0.3),
     0 0 20px rgba(90, 2, 201, 0.3), 0 0 30px rgba(90, 2, 201, 0.3),
     0 0 40px rgba(90, 2, 201, 0.3), 0 0 70px rgba(90, 2, 201, 0.3),
@@ -97,45 +102,69 @@
     #a786f5 0%,
     #5a02c9 51%,
     #2e055f 100%
-    );
+  );
 }
-.orang {
-  --text-color: #413003;
-  --text-porto-color:#d19b08;
+.orange {
+  --text-color: #4d2f06;
+  --text-porto-color: #d19b08;
   --text-simi-ten-color: #69592d;
-  --hover-color: #ff9500;
-  --bg-color: #dfcfa4;
-  --header-bg-color: #dfcfa4b6;
-  --menu-bg-color: #dfcfa4c8;
-  --secon-bg-color: #fff0c6;
-  --mail-bg-color:#003;
-  --input-color:#02e1ffc4;
-  --input-plholder-color:#02e1ff5b;
-  --points-color:#012661;
-  --neon-social:0 0 5px rgb(2, 90, 201);
-  --header-hover: 0 0 10px rgba(2, 170, 255, 0.6), 0 0 20px rgba(2, 170, 255, 0.6),
-  0 0 30px rgba(2, 170, 255, 0.6), 0 0 40px rgba(2, 170, 255, 0.6),
-  0 0 70px rgba(2, 170, 255, 0.6), 0 0 80px rgba(2, 170, 255, 0.6),
-  0 0 100px rgba(2, 170, 255, 0.6), 0 0 150px rgba(2, 170, 255, 0.6);
-  --big-font: 3.5rem;
-  --normal-font: 2rem;
-  --animationText-font: 2.5rem;
-  --h3-font: 1.5rem;
-  --hover-box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px,
-    rgba(0, 0, 0, 0.23) 0 6px 6px;
-  --font-neon-text-shadow: 0 0 10px rgba(2, 90, 201, 0.3),
-    0 0 20px rgba(2, 90, 201, 0.3), 0 0 30px rgba(2, 90, 201, 0.3),
-    0 0 40px rgba(2, 90, 201, 0.3), 0 0 70px rgba(2, 90, 201, 0.3),
-    0 0 80px rgba(2, 90, 201, 0.3), 0 0 100px rgba(2, 90, 201, 0.3),
-    0 0 150px rgba(2, 90, 201, 0.3);
+  --hover-color: #ff5e00;
+  --bg-color: #ffdaa2;
+  --header-bg-color: #ffdaa2b6;
+  --menu-bg-color: #ffdaa2c8;
+  --secon-bg-color: #ffefd6;
+  --mail-bg-color: #301c00;
+  --input-color: #ffbe00;
+  --input-plholder-color: #ffa6006b;
+  --points-color: #4d2f06;
+  --neon-social: 0 0 5px #ff5e00;
+  --header-hover: 0 0 10px rgba(228, 170, 100, 0.6),
+    0 0 20px rgba(228, 170, 100, 0.6), 0 0 30px rgba(228, 170, 100, 0.6),
+    0 0 60px rgba(228, 170, 100, 0.6), 0 0 70px rgba(228, 170, 100, 0.6),
+    0 0 100px rgba(228, 170, 100, 0.6), 0 0 100px rgba(228, 170, 100, 0.6),
+    0 0 150px rgba(228, 170, 100, 0.6);
+  --neon-box-shadow: 0 0 10px #ff5e00;
+  --neon-box-colors-shadow: 0 0 2rem #ff5e00;
+  --font-neon-text-shadow: 0 0 10px rgba(255, 94, 0, 0.302),
+    0 0 20px rgba(255, 94, 0, 0.3), 0 0 30px rgba(255, 94, 0, 0.3),
+    0 0 40px rgba(255, 94, 0, 0.3), 0 0 70px rgba(255, 94, 0, 0.3),
+    0 0 80px rgba(255, 94, 0, 0.3), 0 0 100px rgba(255, 94, 0, 0.3),
+    0 0 150px rgba(255, 94, 0, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
-    #02e1ff 0%,
-    #0275ff 51%,
-    #023dff 100%
-    );
+    #ffa500 0%,
+    #ff7500 51%,
+    #ff3500 100%
+  );
 }
-
+.blue.dark {
+  --hover-color: #0099ff;
+  --text-color: #0357dd;
+}
+.green.dark {
+  --text-color: #0b701e;
+  --hover-color: #00ff22;
+}
+.orange.dark {
+  --text-color: #bd6e00;
+  --hover-color: #ffb937;
+}
+.purple.dark {
+  --text-color: #5300b9;
+  --hover-color: #9034ff;
+}
+.dark {
+  --bg-color: #000;
+  --header-bg-color: #000000b6;
+  --menu-bg-color: #000000c8;
+  --secon-bg-color: #101010;
+  --text-simi-ten-color: var(--text-color);
+}
+#modeInput {
+  display: none;
+}
+/* colorBox */
+/* ///////////////  global rules  /////////////// */
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -148,6 +177,8 @@
 body {
   position: relative;
   background: var(--bg-color);
+  transition: 0.5s;
+  overflow-x: hidden;
 }
 section {
   padding: 5% 10%;
@@ -164,7 +195,7 @@ section {
   background: var(--hover-color);
   border-radius: 5rem;
 }
-/* #menu-logo */
+
 /* ///////////////   header style   ////////////////////// */
 header {
   position: fixed;
@@ -176,14 +207,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10002;
-
-  /* overflow */
+  z-index: 120;
 }
 #menu-icon {
   display: none;
   font-size: 1.8rem;
-  z-index: 10001;
+  z-index: 122;
   cursor: pointer;
   margin-left: 25px;
   background: var(--hover-color);
@@ -216,34 +245,33 @@ nav a {
   transition: 0.3s;
   opacity: 0;
   animation: movingEachANav 1.5s forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation-delay: calc(0.2s * var(--i));
 }
-.mode{
+.mode {
   height: fit-content;
   font-size: 1.5rem;
   padding: 15px 15px 10px;
   cursor: pointer;
 }
-.mode i{
+.mode i {
   border-radius: 5px;
   padding: 5px;
-  transition: background-color 1s, color 1s, scale .5s, box-shadow .5s;
+  transition: background-color 1s, color 1s, scale 0.5s, box-shadow 0.5s;
+  border: 2px solid var(--text-color);
 }
-.bxs-moon{
+.bxs-moon {
   background: var(--text-color);
   color: var(--secon-bg-color);
 }
-.bx-sun{
-  transition: 1s;
+.bx-sun {
   background: var(--secon-bg-color);
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  color: var(--hover-color);
 }
-.mode:hover i{
+.mode:hover i {
   box-shadow: var(--neon-box-shadow);
   scale: 1.1;
 }
-nav a:hover{
+nav > a:hover {
   color: var(--hover-color);
   letter-spacing: 0.5px;
   text-shadow: var(--header-hover);
@@ -261,9 +289,9 @@ nav a:hover{
   width: 100%;
   display: grid;
   padding-top: 10%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  gap: 7rem;
+  gap: 5rem;
 }
 .home-content {
   max-width: 544px;
@@ -353,7 +381,7 @@ nav a:hover{
   border-radius: 5px;
   font-weight: 600;
   transition: 0.7s;
-  color: var(--bg-color);
+  color: var(--secon-bg-color);
   letter-spacing: 0.8px;
   box-shadow: var(--neon-box-shadow);
   position: relative;
@@ -464,6 +492,8 @@ nav a:hover{
   opacity: 1;
 }
 
+/* img-box */
+
 .home-image {
   position: relative;
   bottom: 20px;
@@ -481,7 +511,6 @@ nav a:hover{
     var(--hover-color) 80%,
     transparent 100%
   );
-  transform: scale(1.1);
 }
 
 /* ///////////////  About section   ////////////////////// */
@@ -522,7 +551,7 @@ nav a:hover{
   margin-bottom: 0.4rem;
 }
 .about-content p {
-  color: #232f42;
+  color: var(--text-color);
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
@@ -551,7 +580,7 @@ nav a:hover{
   margin-bottom: 2rem;
   font-size: var(--h3-font);
   text-align: center;
-  color: #012661;
+  color: var(--text-simi-ten-color);
 }
 
 /* ///////////////  Left skills   ////////////////////// */
@@ -733,7 +762,7 @@ small {
 }
 .portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
   gap: 2rem;
 }
 .port-box {
@@ -783,15 +812,15 @@ small {
 .port-content h3 {
   font-size: var(--h3-font);
   font-weight: 600;
-  color:var(--text-porto-color);
+  color: var(--text-porto-color);
 }
 .port-content p {
-  color:var(--text-porto-color);
+  color: var(--text-porto-color);
   font-size: 0.8rem;
   margin: 5px 0 15px 0;
 }
 .port-content a {
-  background: #fff;
+  background: var(--secon-bg-color);
   border-radius: 50%;
   margin: 0 10px;
   display: inline-flex;
@@ -800,7 +829,7 @@ small {
   width: 3rem;
   height: 3rem;
   border: 1px solid var(--text-color);
-  outline: 2px solid #fff;
+  outline: 2px solid var(--secon-bg-color);
   box-shadow: var(--hover-box-shadow);
 }
 .port-content a i {
@@ -843,9 +872,9 @@ small {
   grid-row: 1/3;
   max-height: 630px;
   background: var(--mail-bg-color);
-  padding: 3rem 5rem 2.5rem;
   margin-left: -2.5rem;
   transition: background-color 0.4s;
+  padding: 4.5rem 5rem 2.5rem;
 }
 .contactMail h2 {
   font-size: 1.25rem;
@@ -995,7 +1024,10 @@ footer {
 /* ///////////////  break points  ////////////////////// */
 @media (780px < width < 1153px) {
   .myPhotos {
-    transform: scale(1);
+    scale: 0.95;
+  }
+  .home-image {
+    width: 285px;
   }
   header {
     padding: 0 5%;
@@ -1012,11 +1044,20 @@ footer {
   .contactData {
     max-width: 23rem;
   }
+  #home {
+    gap: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .portfolio-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
 }
 
 @media (max-width: 991px) {
   #home {
-    gap: 5rem;
+    gap: 3rem;
   }
   footer {
     padding: 0.7rem 0;
@@ -1054,7 +1095,13 @@ footer {
 
 @media (max-width: 900px) {
   #home {
-    gap: 3rem;
+    gap: 2rem;
+  }
+  .myPhotos {
+    scale: 0.9;
+  }
+  .home-image {
+    width: 270px;
   }
   .all-skills {
     gap: 3rem;
@@ -1064,7 +1111,6 @@ footer {
   }
   .contactMail {
     max-height: 700px;
-    padding: 2rem 4rem 1.5rem;
   }
   .contactSocial {
     margin-bottom: 3rem;
@@ -1081,16 +1127,20 @@ footer {
     padding: 10px;
   }
   .mode {
-    padding-top: 5px ;
+    padding-top: 5px;
   }
   #home {
-    gap: 3rem;
+    gap: 2rem;
   }
   :root {
     --big-font: 2.7rem;
     --normal-font: 1.7em;
     --h3-font: 1.2rem;
     --animationText-font: 1.9rem;
+  }
+  .contactMail {
+    max-height: 720px;
+    padding: 4.5rem 3.5rem 2.5rem 5rem;
   }
   @keyframes moveText {
     0%,
@@ -1113,6 +1163,9 @@ footer {
 }
 
 @media (max-width: 780px) {
+  body {
+    overflow: hidden;
+  }
   header {
     padding: 10px 10%;
     background: var(--menu-bg-color);
@@ -1127,13 +1180,12 @@ footer {
   #logo {
     transition: 0.3s;
   }
-  .openClosLogo{
+  .openClosLogo {
     opacity: 0;
   }
   #menu-logo {
     display: block;
   }
-
   nav {
     flex-direction: column;
     position: absolute;
@@ -1153,9 +1205,11 @@ footer {
   nav a {
     padding-bottom: 1rem;
   }
-  
-  .openClos {
+  .openMenu {
     top: 13px;
+  }
+  .home-image {
+    width: 100%;
   }
   #home,
   .all-skills {
@@ -1189,30 +1243,38 @@ footer {
   body {
     overflow-x: scroll;
   }
-
+  .portfolio-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
+  .myPhotos {
+    scale: 1;
+  }
   #contact {
+    background: var(--mail-bg-color);
     grid-template-columns: none;
     grid-template-rows: 15rem max-content max-content;
     padding-bottom: 3%;
     padding-top: 20%;
   }
   .contactData {
-    max-width: 25rem;
-    padding: 2rem 2rem 0;
-    height: 18.8rem;
-  }
-  .contactData {
+    max-width: 70%;
+    padding: 2rem;
+    padding-bottom: 2.5rem;
+    height: auto;
     border-bottom: 4px solid var(--hover-color);
-    margin-top: 0;
+    margin: 0 15%;
   }
   .contactMail {
     grid-column: auto;
     grid-row: auto;
-    padding: 4.5rem 4rem 2rem;
+    padding: 4.5rem 0 0;
     margin-left: 0;
   }
   .contactSocialData > .social-icons {
     gap: 3rem;
+  }
+  .contactSocial p {
+    color: var(--input-color);
   }
   .contactSocial {
     padding-block: 1rem 2rem;
@@ -1225,15 +1287,20 @@ footer {
   .contactTextarea {
     height: 10rem;
   }
+  footer,
+  footer p {
+    background: var(--mail-bg-color);
+    color: var(--input-color);
+  }
 }
 
 @media (max-width: 650px) {
   header {
     padding: 10px 5%;
   }
-  #menu-icon{
+  #menu-icon {
     position: relative;
-    right: 40px ;
+    right: 40px;
     top: 0;
   }
   section {
@@ -1244,7 +1311,7 @@ footer {
     padding: 20% 5%;
   }
   .contactMail {
-    padding: 4.5rem 2rem 2rem;
+    padding: 4.5rem 1.5rem 0;
   }
 }
 @media (max-width: 510px) {
@@ -1257,9 +1324,6 @@ footer {
   section {
     padding: 15% 5%;
   }
-  .contactData {
-    max-width: 19rem;
-  }
   @keyframes moveText {
     0%,
     10%,
@@ -1271,6 +1335,12 @@ footer {
       background-position: 0rem 0;
     }
   }
+  .contactMail {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 4.5rem 0.5rem 0;
+    margin-left: 0;
+  }
 }
 @media (max-width: 445px) {
   html {
@@ -1279,9 +1349,8 @@ footer {
   small {
     margin-top: 15px;
   }
-  .contactMail {
-    height: 610px;
-    padding: 4.5rem 1rem 5rem;
+  .myPhotos {
+    scale: 0.9;
   }
 }
 @media (max-width: 390px) {
@@ -1290,6 +1359,12 @@ footer {
     --normal-font: 1.6rem;
     --h3-font: 1.1rem;
     --animationText-font: 1.7rem;
+  }
+  .contactMail {
+    padding: 4.5rem 0 0;
+  }
+  .myPhotos {
+    scale: 0.85;
   }
   @keyframes moveText {
     0%,
@@ -1303,6 +1378,12 @@ footer {
     }
   }
 }
+@media (max-width: 350px) {
+  .home-image,
+  .img-about {
+    width: 300px;
+  }
+}
 
 /* ///////////////    parallax    ////////////////////// */
 .scrollScale {
@@ -1312,12 +1393,12 @@ footer {
 }
 .fromright {
   opacity: 0;
-  translate: 4rem 1rem;
+  translate: 1rem 1rem;
   transition: 1.5s;
 }
 .fromlift {
   opacity: 0;
-  translate: -4rem 1rem;
+  translate: -1rem 1rem;
   transition: 1.5s;
 }
 .show-items {
@@ -1327,45 +1408,56 @@ footer {
 }
 
 @keyframes movingEachANav {
-  from{
-  opacity: 0;
-  translate: 4rem 1rem;
+  from {
+    opacity: 0;
+    translate: 4rem 1rem;
   }
-  to{
+  to {
     opacity: 1;
     translate: 0 0;
   }
 }
 
 @keyframes movingLogo {
-  from{
-  opacity: 0;
-  translate: -4rem 1rem;
+  from {
+    opacity: 0;
+    translate: -4rem 1rem;
   }
-  to{
+  to {
     opacity: 1;
     translate: 0 0;
   }
 }
 
-
 /* ///////////////    Theme Settings    ////////////////////// */
-.theamSettings{
+#displaiedpage {
   position: fixed;
-  top:50%;
-  right: -235px;
+  left: 0;
+  top: 0;
+  z-index: 110;
+  width: 95vw;
+  height: 98vh;
+  display: none;
+}
+.theamSettings {
+  position: fixed;
+  top: 50%;
+  right: -200px;
   transform: translateY(-50%);
-  background: #fff;
-  z-index: 100;
-  box-shadow: var(--neon-box-shadow);
+  background: var(--secon-bg-color);
+  z-index: 150;
+  box-shadow: var(--neon-box-colors-shadow);
   transition: 0.4s ease-in-out;
 }
-.theamSettings.activesetting{
-  right: 0;
+.theamSettings.activesetting {
+  scale: 1.3;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
-.theamSettings .togglebtn{
+.theamSettings .togglebtn {
   position: absolute;
-  left: -50px;
+  left: -55px;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--hover-color);
@@ -1377,34 +1469,35 @@ footer {
   cursor: pointer;
   box-shadow: var(--hover-box-shadow);
 }
-.theamSettings .togglebtn i{
+.theamSettings .togglebtn i {
   color: var(--secon-bg-color);
   font-size: 20px;
 }
-.theamSettings .wrapper{
+.theamSettings .wrapper {
   position: relative;
   width: fit-content;
   padding: 18px;
 }
-.theamSettings .wrapper h3{
+.theamSettings .wrapper h3 {
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
-#colorsDev{
+#colorsDev {
   display: flex;
   gap: 10px;
 }
-#colorsDev .colorBox{
+#colorsDev .colorBox {
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
   background: var(--color);
+  box-shadow: var(--hover-box-shadow);
 }
-#colorsDev .colorBox i{
+#colorsDev .colorBox i {
   position: absolute;
   top: 50%;
   left: 47%;
@@ -1413,14 +1506,14 @@ footer {
   font-size: 1.2rem;
   color: #fff;
   opacity: 0;
-  transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-#colorsDev .colorBox.activeColor i{
+#colorsDev .colorBox.activeColor i {
   opacity: 1;
 }
-#colorsDev label.colorBox{
+#colorsDev label.colorBox {
   background: red;
 }
-#colorsDev label input{
+#colorsDev label input {
   display: none;
 }

@@ -1,69 +1,124 @@
-const tec_skills = document.getElementById("tec-skills");
-const pro_skills = document.querySelector(".professional");
-const portGallery = document.querySelector(".portfolio-gallery");
-const form = document.getElementById("form");
-const contactForm = document.getElementById("contactForm");
-const contactMessage = document.getElementById("contactMessage");
-const menuIcon = document.getElementById("menu-icon");
-const nav = document.querySelector("nav");
-const logo = document.getElementById("logo");
-const navAs = document.querySelectorAll("nav a");
-const mode = document.querySelector(".mode");
-const modeI = document.querySelector(".mode i");
-const colorsDev = document.getElementById("colorsDev");
-const togglebtn = document.querySelector(".togglebtn");
-const theamSettings = document.querySelector(".theamSettings");
 const body = document.body;
 
+// drawing my photo
+const canvas = document.getElementById("canv");
+const context = canvas.getContext("2d");
+const cloneCanvas = document.getElementById("secCanv");
+const secContext = cloneCanvas.getContext("2d");
+const img = new Image();
+img.src = "./me/formal black 2.png";
 
-// colors of the site
-let myColors = ["#025ac9", "#03ad50", "#ffbb00", "#5a02c9"];
-let colorsId = ["blue", "green", "orang", "mauve"]
+// creat the colors of the colors-div
+const colorsDev = document.getElementById("colorsDev");
+let colorsId = ["blue", "green", "orange", "purple"];
+let myLiteColor = ["#02e1ff", "#3fc002", "#ffa500", "#a786f5"];
+let myMediumColor = ["#0275ff", "#0bac20", "#ff7500", "#5a02c9"];
+let myHeavyColor = ["#023dff", "#0e570b", "#ff3500", "#2e055f"];
 let fullColorDev = (_) => {
-  for (i = 0; i < myColors.length; i++) {
+  for (i = 0; i < colorsId.length; i++) {
     colorsDev.innerHTML += `
-      <div class="colorBox" id="${colorsId[i]}" style="--color: ${myColors[i]}">
+      <div class="colorBox" id="${colorsId[i]}" style="--color: linear-gradient(  180deg,  ${myLiteColor[i]} 0%,  ${myMediumColor[i]} 51%,  ${myHeavyColor[i]} 100%);">
       <i class='bx bx-check'></i>
       <div>
     `;
   }
-  colorsDev.innerHTML += `
-  <label for="colorPicker" class="colorBox">
-    <input type="color" id="colorPicker" /><i class='bx bx-check'></i>
-  </label>`;
-  let f = document.querySelector(".colorBox");
-  f.classList.add("activeColor");
+
+  let blueColorBox = document.getElementById("blue");
+  blueColorBox.classList.add("activeColor");
 };
 fullColorDev();
+
+// change the shadow color of my potos & draw them
+let changeBgImg = (_) => {
+  if (body.classList.contains("dark")) {
+    shadowHoverColor = getComputedStyle(document.body)
+      .getPropertyValue("--text-color")
+      .trim();
+  } else {
+    shadowHoverColor = getComputedStyle(document.body)
+      .getPropertyValue("--hover-color")
+      .trim();
+  }
+  return shadowHoverColor;
+};
+let drawImgAgain = (_) => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  secContext.clearRect(0, 0, cloneCanvas.width, cloneCanvas.height);
+  changeBgImg();
+  context.shadowColor = shadowHoverColor;
+  context.shadowBlur = 40;
+  context.shadowOffsetX = 0;
+  context.shadowOffsetY = -10;
+  context.drawImage(img, 15, 45);
+  secContext.drawImage(canvas, 0, 0);
+};
+img.onload = () => {
+  changeBgImg();
+  drawImgAgain();
+};
+
 const colorBoxs = document.querySelectorAll(".colorBox");
 
+// make the background of the colors-div displaiedpage
+const theamSettings = document.querySelector(".theamSettings");
+const opacityBody = body.querySelectorAll("section, #progress");
+const displaiedpage = document.getElementById("displaiedpage");
+let opacityBodyColer = (_) => {
+  if (theamSettings.classList.contains("activesetting")) {
+    opacityBody.forEach((all) => {
+      displaiedpage.style.display = "block";
+      all.style.opacity = ".5";
+    });
+  } else {
+    opacityBody.forEach((all) => {
+      displaiedpage.style.display = "none";
+      all.style.opacity = "1";
+    });
+  }
+};
 
+// make the colors-div hide & appear
+const togglebtn = document.querySelector(".togglebtn");
 togglebtn.onclick = (_) => {
   theamSettings.classList.toggle("activesetting");
+  opacityBodyColer();
 };
-window.onscroll = (_) => {
-  theamSettings.classList.remove("activesetting");
-};
-
 let removeActiveC = (_) => {
   for (i = 0; i < colorBoxs.length; i++) {
     colorBoxs[i].classList.remove("activeColor");
   }
 };
-
-
-
-
+opacityBody.onclick = (_) => {
+  theamSettings.classList.remove("activesetting");
+};
 colorBoxs.forEach((colorBox) => {
   colorBox.onclick = (_) => {
     removeActiveC();
     colorBox.classList.add("activeColor");
-    body.classList.remove("blue", "green", "orang", "mauve")
-    body.classList.add(colorBox.id)
+    colorsId.forEach((color) => {
+      body.classList.remove(color);
+    });
+    body.classList.add(colorBox.id);
+    theamSettings.classList.remove("activesetting");
+    opacityBodyColer();
+    changeBgImg();
+    drawImgAgain();
   };
 });
 
+// toggle between Day and Night mode
+const mode = document.querySelector(".mode");
+const modeI = document.querySelector(".mode i");
+let changeMode = (_) => {
+  modeI.classList.toggle("bx-sun");
+  modeI.classList.toggle("bxs-moon");
+  body.classList.toggle("dark");
+  drawImgAgain();
+};
+mode.onclick = changeMode;
+
 // technical skills Icons
+const tec_skills = document.getElementById("tec-skills");
 let myTecSkills_i = [
   "bxl-html5",
   "bxl-css3",
@@ -89,15 +144,16 @@ let myTecSkills_n = [
 let TecSkills_list = (_) => {
   for (i = 0; i < myTecSkills_i.length; i++) {
     tec_skills.innerHTML += `
-                    <div class="skill-box">
-                      <i class="bx ${myTecSkills_i[i]} after"></i>
-                      <p>${myTecSkills_n[i]}</p>
-                      </div>`;
+      <div class="skill-box">
+        <i class="bx ${myTecSkills_i[i]} after"></i>
+        <p>${myTecSkills_n[i]}</p>
+        </div>`;
   }
 };
 TecSkills_list();
 
 // circle skills
+const pro_skills = document.querySelector(".professional");
 let myProSkills_s = [
   "Team Work",
   "communication",
@@ -139,17 +195,14 @@ circles.forEach((circle) => {
 });
 
 // My Portfolio
+const portGallery = document.querySelector(".portfolio-gallery");
 let imgName = [
   "CRUDS",
   "Gold_World",
   "moving_boat",
   "Editor",
   "Market",
-  "Space",
   "Iphone",
-  "Adidas",
-  "Avatar",
-  "Earth-s_orbit",
 ];
 let describingP = [
   "Merchandise store",
@@ -157,11 +210,7 @@ let describingP = [
   "A site for booking boat trips",
   "A site for uploading and editing images",
   "A site to collect all information about our Market",
-  "A website to display scientific articles about the planets of the solar system",
   "Iphone website interface with variable background",
-  "A website interface for displaying Adidas products",
-  "Avatar website interface",
-  "Animation showing the rotation of planet Earth and its moon around the sun",
 ];
 let category = [
   "CRUDS Interactive",
@@ -170,10 +219,6 @@ let category = [
   "Animated",
   "Website-interface",
   "Website-interface Interactive",
-  "Website-interface Interactive",
-  "Website-interface",
-  "Website-interface",
-  "Animated",
 ];
 let myPortfolioList = (_) => {
   for (i = 0; i < imgName.length; i++) {
@@ -199,6 +244,8 @@ myPortfolioList();
 var mixer = mixitup(".portfolio-gallery");
 
 // mack the contact run
+const contactForm = document.getElementById("contactForm");
+const contactMessage = document.getElementById("contactMessage");
 const sendEmail = (e) => {
   e.preventDefault();
 
@@ -240,10 +287,14 @@ let calcScrollValue = (_) => {
   scrollProgress.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
   });
-  scrollProgress.style.background = `conic-gradient(var(--text-color) ${scrollValue}%, transparent ${scrollValue}%)`;
+  scrollProgress.style.background = `conic-gradient(var(--text-simi-ten-color) ${scrollValue}%, transparent ${scrollValue}%)`;
 };
 window.addEventListener("scroll", calcScrollValue);
-window.onload = calcScrollValue;
+window.onload = (_) => {
+  theamSettings.classList.add("activesetting");
+  opacityBodyColer();
+  calcScrollValue();
+};
 
 // Active menu
 let menuli = document.querySelectorAll("header nav a");
@@ -254,19 +305,23 @@ let activeMenu = () => {
   menuli.forEach((section) => section.classList.remove("active"));
   menuli[len].classList.add("active");
 };
-activeMenu();
-window.addEventListener("scroll", activeMenu);
 
-// open & close the navbar
+// open & close the menu
+const logo = document.getElementById("logo");
+const nav = document.querySelector("nav");
+const menuIcon = document.getElementById("menu-icon");
 menuIcon.onclick = (_) => {
   logo.classList.toggle("openClosLogo");
-  nav.classList.toggle("openClos");
+  nav.classList.toggle("openMenu");
   menuIcon.classList.toggle("bx-x");
 };
 window.onscroll = (_) => {
+  activeMenu();
   logo.classList.remove("openClosLogo");
-  nav.classList.remove("openClos");
+  nav.classList.remove("openMenu");
   menuIcon.classList.remove("bx-x");
+  theamSettings.classList.remove("activesetting");
+  opacityBodyColer();
 };
 
 //  parallax
@@ -288,10 +343,3 @@ fromlift.forEach((el) => observer.observe(el));
 
 const fromright = document.querySelectorAll(".fromright");
 fromright.forEach((el) => observer.observe(el));
-
-// night mode and Day
-let changeMode = (_) => {
-  modeI.classList.toggle("bx-sun");
-  modeI.classList.toggle("bxs-moon");
-};
-mode.onclick = changeMode;

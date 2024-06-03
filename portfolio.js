@@ -1,11 +1,5 @@
 const body = document.body;
 
-
-window.onload = function() {
-  // Ensure no scroll happens
-  window.scrollTo(0, 0);
-};
-
 // drawing my photo
 const canvas = document.getElementById("canv");
 const context = canvas.getContext("2d");
@@ -227,7 +221,7 @@ let category = [
   "Website-interface Interactive",
 ];
 let myPortfolioList = (_) => {
-  let emptyPortGallery = '';
+  let emptyPortGallery = "";
   for (i = 0; i < imgName.length; i++) {
     emptyPortGallery += `
     <div class="port-box mix ${category[i]} scrollScale">
@@ -246,7 +240,7 @@ let myPortfolioList = (_) => {
       </div>
     </div>`;
   }
-  portGallery.innerHTML = emptyPortGallery
+  portGallery.innerHTML = emptyPortGallery;
 };
 myPortfolioList();
 let mixer = mixitup(".portfolio-gallery");
@@ -302,6 +296,7 @@ window.onload = (_) => {
   theamSettings.classList.add("activesetting");
   opacityBodyColer();
   calcScrollValue();
+  window.scrollTo(0, 0);
 };
 
 // Active menu

@@ -221,8 +221,9 @@ let category = [
   "Website-interface Interactive",
 ];
 let myPortfolioList = (_) => {
+  let emptyPortGallery = '';
   for (i = 0; i < imgName.length; i++) {
-    portGallery.innerHTML += `
+    emptyPortGallery += `
     <div class="port-box mix ${category[i]} scrollScale">
       <div class="port-image">
         <img src="./portfolio/${imgName[i]}.jpg" alt="" />
@@ -239,9 +240,10 @@ let myPortfolioList = (_) => {
       </div>
     </div>`;
   }
+  portGallery.innerHTML = emptyPortGallery
 };
 myPortfolioList();
-var mixer = mixitup(".portfolio-gallery");
+let mixer = mixitup(".portfolio-gallery");
 
 // mack the contact run
 const contactForm = document.getElementById("contactForm");

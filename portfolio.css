@@ -1341,6 +1341,9 @@ footer {
     padding: 4.5rem 0.5rem 0;
     margin-left: 0;
   }
+  #progress {
+    transition: 0.1s;
+  }
 }
 @media (max-width: 445px) {
   html {

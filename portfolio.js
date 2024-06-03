@@ -1,5 +1,11 @@
 const body = document.body;
 
+
+window.onload = function() {
+  // Ensure no scroll happens
+  window.scrollTo(0, 0);
+};
+
 // drawing my photo
 const canvas = document.getElementById("canv");
 const context = canvas.getContext("2d");

@@ -296,7 +296,6 @@ window.onload = (_) => {
   theamSettings.classList.add("activesetting");
   opacityBodyColer();
   calcScrollValue();
-  window.scrollTo(0, 0);
 };
 
 // Active menu

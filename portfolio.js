@@ -197,28 +197,28 @@ circles.forEach((circle) => {
 // My Portfolio
 const portGallery = document.querySelector(".portfolio-gallery");
 let imgName = [
+  "New-Horizons",
   "CRUDS",
   "Gold_World",
   "moving_boat",
   "Editor",
   "Market",
-  "Iphone",
 ];
 let describingP = [
+  "A travel and adventure website",
   "Merchandise store",
   "Calculate the value of your gold",
   "A site for booking boat trips",
   "A site for uploading and editing images",
   "A site to collect all information about our Market",
-  "Iphone website interface with variable background",
 ];
 let category = [
+  "Website-interface Interactive",
   "CRUDS Interactive",
   "CRUDS Interactive",
   "Animated Interactive",
   "Animated",
   "Website-interface",
-  "Website-interface Interactive",
 ];
 let myPortfolioList = (_) => {
   let emptyPortGallery = "";

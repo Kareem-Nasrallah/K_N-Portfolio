@@ -163,7 +163,7 @@
 #modeInput {
   display: none;
 }
-/* colorBox */
+/* + */
 /* ///////////////  global rules  /////////////// */
 * {
   font-family: "Poppins", sans-serif;
@@ -234,7 +234,7 @@ span,
   color: transparent;
   background: var(--gradient-coler-bg);
   -webkit-text-stroke: 0.05vw var(--text-color);
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 nav {
   display: flex;
@@ -318,7 +318,7 @@ nav > a:hover {
   -webkit-text-stroke: 0.1vw var(--text-color);
   background: var(--gradient-coler-bg);
   background-repeat: no-repeat;
-  -webkit-background-clip: text;
+  background-clip: text;
   background-position: 0 0;
   transition: 0.6s;
   letter-spacing: 2px;

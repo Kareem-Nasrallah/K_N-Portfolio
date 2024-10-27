@@ -197,36 +197,36 @@ circles.forEach((circle) => {
 // My Portfolio
 const portGallery = document.querySelector(".portfolio-gallery");
 let imgName = [
+  "NatureNest Realty",
   "New-Horizons",
-  "CRUDS",
-  "naturenest_realty_frontend",
-  "Tazza",
-  "Editor",
   "Prayar_Time",
+  "Tazza",
+  "CRUDS",
+  "Editor",
 ];
 let ProName = [
-  "New Horizons",
-  "CRUDS",
   "NatureNest Realty",
-  "Tazza",
-  "Editor",
+  "New Horizons",
   "Prayar Time",
+  "Tazza",
+  "CRUDS",
+  "Editor",
 ];
 let describingP = [
-  "A travel and adventure website",
-  "Merchandise store",
   "A site for real estate trade and investment",
-  "An e-commerce site for vegetables and fruits",
-  "A site for uploading and editing images",
+  "A travel and adventure website",
   "A website displaying a prayer times API",
+  "An e-commerce site for vegetables and fruits",
+  "Merchandise store",
+  "A site for uploading and editing images",
 ];
 let category = [
-  "Interactive CRUDS",
-  "CRUDS Interactive",
   "React ",
-  "",
-  "Interactive",
+  "Interactive CRUDS",
   "React Interactive",
+  "",
+  "CRUDS Interactive",
+  "Interactive",
 ];
 let myPortfolioList = (_) => {
   let emptyPortGallery = "";

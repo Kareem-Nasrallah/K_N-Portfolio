@@ -231,7 +231,24 @@ let category = [
 let myPortfolioList = (_) => {
   let emptyPortGallery = "";
   for (i = 0; i < imgName.length; i++) {
-    emptyPortGallery += `
+    if (i == 0 || i == 2) {
+      emptyPortGallery += `
+    <div class="port-box mix ${category[i]} scrollScale">
+      <div class="port-image">
+        <img src="./portfolio/${imgName[i]}.jpg" alt="" />
+      </div>
+      <div class="port-content">
+        <h3>${ProName[i]}</h3>
+        <p>
+          ${describingP[i]}
+        </p>
+        <div class="portoLinks">
+          <a href="https://github.com/Kareem-Nasrallah/${imgName[i]}" target="_blank"><i class='bx bxl-github' ></i></a>
+        </div>
+      </div>
+    </div>`;
+    } else {
+      emptyPortGallery += `
     <div class="port-box mix ${category[i]} scrollScale">
       <div class="port-image">
         <img src="./portfolio/${imgName[i]}.jpg" alt="" />
@@ -247,6 +264,7 @@ let myPortfolioList = (_) => {
         </div>
       </div>
     </div>`;
+    }
   }
   portGallery.innerHTML = emptyPortGallery;
 };

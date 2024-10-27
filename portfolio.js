@@ -199,26 +199,34 @@ const portGallery = document.querySelector(".portfolio-gallery");
 let imgName = [
   "New-Horizons",
   "CRUDS",
-  "Gold_World",
-  "moving_boat",
+  "naturenest_realty_frontend",
+  "Tazza",
   "Editor",
-  "Market",
+  "Prayar_Time",
+];
+let ProName = [
+  "New Horizons",
+  "CRUDS",
+  "NatureNest Realty",
+  "Tazza",
+  "Editor",
+  "Prayar Time",
 ];
 let describingP = [
   "A travel and adventure website",
   "Merchandise store",
-  "Calculate the value of your gold",
-  "A site for booking boat trips",
+  "A site for real estate trade and investment",
+  "An e-commerce site for vegetables and fruits",
   "A site for uploading and editing images",
-  "A site to collect all information about our Market",
+  "A website displaying a prayer times API",
 ];
 let category = [
-  "Website-interface Interactive",
+  "Interactive CRUDS",
   "CRUDS Interactive",
-  "CRUDS Interactive",
-  "Animated Interactive",
-  "Animated",
-  "Website-interface",
+  "React ",
+  "",
+  "Interactive",
+  "React Interactive",
 ];
 let myPortfolioList = (_) => {
   let emptyPortGallery = "";
@@ -229,7 +237,7 @@ let myPortfolioList = (_) => {
         <img src="./portfolio/${imgName[i]}.jpg" alt="" />
       </div>
       <div class="port-content">
-        <h3>${imgName[i]}</h3>
+        <h3>${ProName[i]}</h3>
         <p>
           ${describingP[i]}
         </p>

@@ -163,7 +163,7 @@
 #modeInput {
   display: none;
 }
-/* + */
+
 /* ///////////////  global rules  /////////////// */
 * {
   font-family: "Poppins", sans-serif;
@@ -181,8 +181,9 @@ body {
   overflow-x: hidden;
 }
 section {
-  padding: 3% 10%;
-  min-height: 100vh;
+  padding: 5% 10%;
+  margin-top: 12px;
+  min-height: 90vh;
 }
 ::-webkit-scrollbar {
   height: 0;
@@ -201,8 +202,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px 10%;
+  padding: 0 10%;
   background: var(--header-bg-color);
+  backdrop-filter: blur(5px) saturate(1.5);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -251,7 +253,7 @@ nav a {
 .mode {
   height: fit-content;
   font-size: 1.5rem;
-  padding: 0 15px;
+  padding: 10px 0 10px 15px;
   cursor: pointer;
 }
 .mode i {
@@ -605,6 +607,13 @@ nav > a:hover {
 .bxl-css3 {
   color: #224bff;
 }
+.bxl-react {
+  color: #087ea4;
+}
+.bxl-bootstrap {
+  color: #7537e1;
+}
+
 .after {
   position: relative;
   z-index: 5;
@@ -628,6 +637,13 @@ nav > a:hover {
   width: 50%;
   height: 53%;
   border-radius: 25%;
+}
+.bxl-react::after {
+  background: #222222;
+  top: -2%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
 }
 .bxl-javascript {
   color: yellow;
@@ -1034,7 +1050,7 @@ footer {
     padding: 0 5%;
   }
   section {
-    padding: 5% 5%;
+    padding: 50px 5%;
   }
   #portfolio {
     padding-top: 7%;
@@ -1227,12 +1243,12 @@ footer {
     margin-top: 2rem;
   }
   section {
-    padding: 10%;
+    padding: 70px 10%;
   }
-  #home,
+  /* #home,
   #about {
     padding: 15% 10%;
-  }
+  } */
   #home .home-image {
     position: static;
   }

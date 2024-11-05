@@ -155,7 +155,7 @@
 }
 .dark {
   --bg-color: #000;
-  --header-bg-color: #000000b6;
+  --header-bg-color: #444444b6;
   --menu-bg-color: #000000c8;
   --secon-bg-color: #101010;
   --text-simi-ten-color: var(--text-color);
@@ -203,6 +203,7 @@ header {
   left: 0;
   padding: 0 10%;
   background: var(--header-bg-color);
+  backdrop-filter: blur(5px) contrast(1.2) saturate(1.5);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -604,6 +605,13 @@ nav > a:hover {
 .bxl-css3 {
   color: #224bff;
 }
+.bxl-react{
+  color: #087ea4;
+}
+.bxl-bootstrap{
+  color: #7537e1;
+}
+
 .after {
   position: relative;
   z-index: 5;
@@ -628,11 +636,18 @@ nav > a:hover {
   height: 53%;
   border-radius: 25%;
 }
+.bxl-react::after{
+  background: #222222;
+  top: -2%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+}
 .bxl-javascript {
   color: yellow;
 }
 .bxl-typescript {
-  color: #2584f0;
+  color: rgb(37, 132, 240);
 }
 
 .bxl-javascript::after,

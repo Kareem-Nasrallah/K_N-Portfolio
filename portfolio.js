@@ -20,6 +20,7 @@ let fullColorDev = (_) => {
 };
 fullColorDev();
 
+<<<<<<< HEAD
 // drawing my photo
 const canvas = document.getElementById("canv");
 const context = canvas.getContext("2d");
@@ -56,6 +57,8 @@ img.onload = () => {
   changeBgImg();
   drawImgAgain();
 };
+=======
+>>>>>>> 18484293204352488346de078c7d4101f8bcb69e
 
 const colorBoxs = document.querySelectorAll(".colorBox");
 
@@ -116,41 +119,6 @@ let changeMode = (_) => {
   drawImgAgain();
 };
 mode.onclick = changeMode;
-
-// technical skills Icons
-const tec_skills = document.getElementById("tec-skills");
-let myTecSkills_i = [
-  "bxl-html5",
-  "bxl-css3",
-  "bxl-javascript",
-  "bxl-c-plus-plus",
-  "bxl-sass",
-  "bxl-typescript",
-  "bxl-git",
-  "bxl-github",
-  "bx-data",
-];
-let myTecSkills_n = [
-  "HTML 5",
-  "CSS 3",
-  "javascript",
-  "c++",
-  "scss",
-  "typescript",
-  "git",
-  "gitHub",
-  "fundamentals<br>database",
-];
-let TecSkills_list = (_) => {
-  for (i = 0; i < myTecSkills_i.length; i++) {
-    tec_skills.innerHTML += `
-      <div class="skill-box">
-        <i class="bx ${myTecSkills_i[i]} after"></i>
-        <p>${myTecSkills_n[i]}</p>
-        </div>`;
-  }
-};
-TecSkills_list();
 
 // circle skills
 const pro_skills = document.querySelector(".professional");
@@ -221,7 +189,7 @@ let describingP = [
   "A site for uploading and editing images",
 ];
 let category = [
-  "React ",
+  "React CRUDS Interactive",
   "Interactive CRUDS",
   "React Interactive",
   "",

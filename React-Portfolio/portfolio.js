@@ -6,7 +6,7 @@ let colorsId = ["blue", "green", "orange", "purple"];
 let myLiteColor = ["#02e1ff", "#3fc002", "#ffa500", "#a786f5"];
 let myMediumColor = ["#0275ff", "#0bac20", "#ff7500", "#5a02c9"];
 let myHeavyColor = ["#023dff", "#0e570b", "#ff3500", "#2e055f"];
-let fullColorDev = (_) => {
+let fullColorDev = _ => {
   for (i = 0; i < colorsId.length; i++) {
     colorsDev.innerHTML += `
       <div class="colorBox" id="${colorsId[i]}" style="--color: linear-gradient(  180deg,  ${myLiteColor[i]} 0%,  ${myMediumColor[i]} 51%,  ${myHeavyColor[i]} 100%);">
@@ -14,10 +14,10 @@ let fullColorDev = (_) => {
       <div>
     `;
   }
+}
 
-  let blueColorBox = document.getElementById("blue");
-  blueColorBox.classList.add("activeColor");
-};
+let blueColorBox = document.getElementById("blue");
+blueColorBox.classList.add("activeColor");
 fullColorDev();
 
 
@@ -150,7 +150,7 @@ let describingP = [
   "A site for uploading and editing images",
 ];
 let category = [
-  "React CRUDS Interactive",
+  "React ",
   "Interactive CRUDS",
   "React Interactive",
   "",

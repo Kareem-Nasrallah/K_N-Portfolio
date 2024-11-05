@@ -1,13 +1,5 @@
 const body = document.body;
 
-// drawing my photo
-const canvas = document.getElementById("canv");
-const context = canvas.getContext("2d");
-const cloneCanvas = document.getElementById("secCanv");
-const secContext = cloneCanvas.getContext("2d");
-const img = new Image();
-img.src = "./me/formal black 2.png";
-
 // creat the colors of the colors-div
 const colorsDev = document.getElementById("colorsDev");
 let colorsId = ["blue", "green", "orange", "purple"];
@@ -22,40 +14,12 @@ let fullColorDev = _ => {
       <div>
     `;
   }
+}
 
-  let blueColorBox = document.getElementById("blue");
-  blueColorBox.classList.add("activeColor");
-};
+let blueColorBox = document.getElementById("blue");
+blueColorBox.classList.add("activeColor");
 fullColorDev();
 
-// change the shadow color of my potos & draw them
-let changeBgImg = (_) => {
-  if (body.classList.contains("dark")) {
-    shadowHoverColor = getComputedStyle(document.body)
-      .getPropertyValue("--text-color")
-      .trim();
-  } else {
-    shadowHoverColor = getComputedStyle(document.body)
-      .getPropertyValue("--hover-color")
-      .trim();
-  }
-  return shadowHoverColor;
-};
-let drawImgAgain = (_) => {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  secContext.clearRect(0, 0, cloneCanvas.width, cloneCanvas.height);
-  changeBgImg();
-  context.shadowColor = shadowHoverColor;
-  context.shadowBlur = 40;
-  context.shadowOffsetX = 0;
-  context.shadowOffsetY = -10;
-  context.drawImage(img, 15, 45);
-  secContext.drawImage(canvas, 0, 0);
-};
-img.onload = () => {
-  changeBgImg();
-  drawImgAgain();
-};
 
 const colorBoxs = document.querySelectorAll(".colorBox");
 

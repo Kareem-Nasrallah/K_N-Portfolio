@@ -1,13 +1,5 @@
 const body = document.body;
 
-// drawing my photo
-const canvas = document.getElementById("canv");
-const context = canvas.getContext("2d");
-const cloneCanvas = document.getElementById("secCanv");
-const secContext = cloneCanvas.getContext("2d");
-const img = new Image();
-img.src = "./me/formal black 2.png";
-
 // creat the colors of the colors-div
 const colorsDev = document.getElementById("colorsDev");
 let colorsId = ["blue", "green", "orange", "purple"];
@@ -27,6 +19,14 @@ let fullColorDev = (_) => {
   blueColorBox.classList.add("activeColor");
 };
 fullColorDev();
+
+// drawing my photo
+const canvas = document.getElementById("canv");
+const context = canvas.getContext("2d");
+const cloneCanvas = document.getElementById("secCanv");
+const secContext = cloneCanvas.getContext("2d");
+const img = new Image();
+img.src = "./me/formal black 2.png";
 
 // change the shadow color of my potos & draw them
 let changeBgImg = (_) => {

@@ -1,16 +1,11 @@
 
 // /me/formal black 2.png
 
+import CanvasMyPhoto from "../Componetns/CanvasMyPhoto"
+
 const Home = () => {
 
     
-const canvas = document.getElementById("canv");
-const context = canvas.getContext("2d");
-const cloneCanvas = document.getElementById("secCanv");
-const secContext = cloneCanvas.getContext("2d");
-const img = new Image();
-img.src = "/me/formal black 2.png";
-
   return (
         <section id="home">
             <div className="home-content">
@@ -41,7 +36,7 @@ img.src = "/me/formal black 2.png";
                 </div>
             </div>
             <div className="home-image">
-                <canvas id="canv" className="myPhotos" width="320px" height="500px" />
+                <CanvasMyPhoto/>
             </div>
         </section>
   )

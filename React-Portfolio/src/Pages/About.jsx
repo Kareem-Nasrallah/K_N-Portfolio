@@ -1,9 +1,10 @@
+import CanvasMyPhoto from "../Componetns/CanvasMyPhoto"
 
 const About = () => {
   return (
     <section id="about">
         <div className="img-about">
-            <canvas id="secCanv" className="myPhotos" width="320px" height="500px" />
+        <CanvasMyPhoto/>
         </div>
         <div className="about-content">
             <span>Let me intteoduce myself</span>

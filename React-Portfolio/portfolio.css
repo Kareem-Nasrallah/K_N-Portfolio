@@ -181,7 +181,7 @@ body {
   overflow-x: hidden;
 }
 section {
-  padding: 5% 10%;
+  padding: 3% 10%;
   min-height: 100vh;
 }
 ::-webkit-scrollbar {
@@ -201,7 +201,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 10%;
+  padding: 10px 10%;
   background: var(--header-bg-color);
   width: 100%;
   display: flex;
@@ -238,9 +238,10 @@ span,
 }
 nav {
   display: flex;
+  align-items: center;
 }
 nav a {
-  padding: 20px 15px 10px;
+  padding: 0 15px;
   font-weight: 500;
   transition: 0.3s;
   opacity: 0;
@@ -250,7 +251,7 @@ nav a {
 .mode {
   height: fit-content;
   font-size: 1.5rem;
-  padding: 15px 15px 10px;
+  padding: 0 15px;
   cursor: pointer;
 }
 .mode i {
@@ -285,10 +286,10 @@ nav > a:hover {
 
 /* ///////////////  Home section   ////////////////////// */
 #home {
-  height: 90%;
+  height: 80%;
   width: 100%;
   display: grid;
-  padding-top: 10%;
+  padding-top: 6%;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
   gap: 5rem;
@@ -448,7 +449,7 @@ nav > a:hover {
 }
 
 .social-icons {
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -523,10 +524,10 @@ nav > a:hover {
 }
 #about .img-about {
   text-align: center;
-  width: 50%;
+  width: 40%;
 }
 .about-content {
-  max-width: 34rem;
+  max-width: 37rem;
 }
 .about-content > span,
 .main-text > span {

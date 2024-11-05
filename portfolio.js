@@ -120,26 +120,26 @@ mode.onclick = changeMode;
 // technical skills Icons
 const tec_skills = document.getElementById("tec-skills");
 let myTecSkills_i = [
-  "bxl-html5",
+  "bxl-react",
   "bxl-css3",
+  "bxl-html5",
   "bxl-javascript",
-  "bxl-c-plus-plus",
   "bxl-sass",
-  "bxl-typescript",
   "bxl-git",
+  "bxl-typescript",
+  "bxl-bootstrap",
   "bxl-github",
-  "bx-data",
 ];
 let myTecSkills_n = [
-  "HTML 5",
+  "React",
   "CSS 3",
+  "HTML 5",
   "javascript",
-  "c++",
   "scss",
-  "typescript",
   "git",
+  "typescript",
+  "Bootstrap",
   "gitHub",
-  "fundamentals<br>database",
 ];
 let TecSkills_list = (_) => {
   for (i = 0; i < myTecSkills_i.length; i++) {
@@ -221,7 +221,7 @@ let describingP = [
   "A site for uploading and editing images",
 ];
 let category = [
-  "React ",
+  "React CRUDS Interactive",
   "Interactive CRUDS",
   "React Interactive",
   "",

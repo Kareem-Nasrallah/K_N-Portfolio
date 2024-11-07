@@ -1,4 +1,4 @@
-import ProfSkill from "../../Componetns/ProfSkill";
+import ProfSkill from "../../Components/ProfSkill";
 import TecSkills from "./TecSkills";
 
 const Skills = () => {

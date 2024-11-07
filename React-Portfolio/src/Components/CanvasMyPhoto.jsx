@@ -1,18 +1,19 @@
-import {useRef, useEffect} from "react"
+import {useRef, useEffect, useState} from "react"
 
 const CanvasMyPhoto = () => {
+
+  const [shadowHoverColor, setShadowColor] = useState('')
+
     const canvasRef = useRef(null)
-    let shadowHoverColor = '';
     
   // Function to update shadow color based on dark mode
   const changeBgImg = () => {
     const body = document.body;
     if (body.classList.contains("dark")) {
-      shadowHoverColor = getComputedStyle(body).getPropertyValue("--text-color").trim();
+      setShadowColor(getComputedStyle(body).getPropertyValue("--text-color").trim());
     } else {
-      shadowHoverColor = getComputedStyle(body).getPropertyValue("--hover-color").trim();
+      setShadowColor(getComputedStyle(body).getPropertyValue("--hover-color").trim());
     }
-    return shadowHoverColor;
   };
 
   // Function to clear and redraw the image with shadow effect

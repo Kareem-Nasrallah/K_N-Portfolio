@@ -759,11 +759,11 @@ small {
 #portfolio {
   background: var(--secon-bg-color);
 }
-.fillter-buttons {
+.filter-buttons {
   text-align: center;
   margin: 2rem 0;
 }
-.fillter-buttons > button {
+.filter-buttons > button {
   margin: 5px 0.7rem;
   background: none;
   border: none;
@@ -774,7 +774,7 @@ small {
   letter-spacing: 0.4px;
   color: var(--text-color);
 }
-.fillter-buttons > button:hover {
+.filter-buttons > button:hover {
   color: var(--hover-color);
 }
 .portfolio-gallery {

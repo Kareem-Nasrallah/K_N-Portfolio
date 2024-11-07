@@ -1,4 +1,4 @@
-import CanvasMyPhoto from "../Componetns/CanvasMyPhoto"
+import CanvasMyPhoto from "../Components/CanvasMyPhoto"
 
 const About = () => {
   return (

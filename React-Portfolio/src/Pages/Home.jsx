@@ -1,7 +1,7 @@
 
 // /me/formal black 2.png
 
-import CanvasMyPhoto from "../Componetns/CanvasMyPhoto"
+import CanvasMyPhoto from "../Components/CanvasMyPhoto"
 
 const Home = () => {
 

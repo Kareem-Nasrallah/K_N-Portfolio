@@ -5,7 +5,7 @@ import CanvasMyPhoto from "../Components/CanvasMyPhoto";
 const Home = () => {
   return (
     <>
-      <Colors />
+      <Colors fristIn={true} />
       <section id="home">
         <div className="home-content">
           <h3>Hi! Im</h3>

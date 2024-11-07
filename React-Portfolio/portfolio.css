@@ -1455,8 +1455,10 @@ footer {
   left: 0;
   top: 0;
   z-index: 110;
-  width: 95vw;
-  height: 98vh;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: brightness(0.9) blur(2px);
+  display: none;
 }
 .theamSettings {
   position: fixed;
@@ -1513,7 +1515,6 @@ footer {
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  background: var(--color);
   box-shadow: var(--hover-box-shadow);
 }
 #colorsDev .colorBox i {

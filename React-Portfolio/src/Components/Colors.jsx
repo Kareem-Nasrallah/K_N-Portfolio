@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
-const Colors = () => {
+const Colors = ({ fristIn }) => {
   const allColors = [
     {
       color: "blue",
@@ -33,33 +33,42 @@ const Colors = () => {
 
   const toggleBtnColor = () => {
     themeRef.current.classList.toggle("activesetting");
+    displaiedDivRef.current.style.display = themeRef.current.classList.contains(
+      "activesetting"
+    )
+      ? "block"
+      : "none";
   };
-  onload = (_) => {
-    themeRef.current.classList.add("activesetting");
+
+  onscroll = () => {
+    themeRef.current.classList.remove("activesetting");
+    displaiedDivRef.current.style.display = "none";
   };
+
+  fristIn
+    ? useEffect(() => {
+        themeRef.current.classList.add("activesetting");
+        displaiedDivRef.current.style.display = "block";
+      }, [])
+    : "";
 
   const colorChosen = (color) => {
     themeRef.current.classList.remove("activesetting");
     displaiedDivRef.current.style.display = "none";
-    if (document.body.classList.contains("dark")) {
-      document.body.className = "dark";
-      document.body.classList.add(color);
-    } else {
-      document.body.className = color;
-    }
+    document.body.className = document.body.classList.contains("dark")
+      ? `dark ${color}`
+      : color;
   };
 
   return (
     <div>
-      {themeRef.current.classList.contains("activesetting") && (
-        <div id="displaiedpage" ref={displaiedDivRef} />
-      )}
+      <div id="displaiedpage" ref={displaiedDivRef} />
       <div ref={themeRef} className="theamSettings">
         <div className="togglebtn" onClick={toggleBtnColor}>
           <i className="bx bxs-cog" />
         </div>
         <div className="wrapper">
-          <h3>chose your color</h3>
+          <h3>chose your fv color</h3>
           <div id="colorsDev">
             {allColors.map(
               ({ color, liteColor, mediumColor, heavyColor }, i) => (
@@ -69,7 +78,7 @@ const Colors = () => {
                   id={color}
                   onClick={() => colorChosen(color)}
                   style={{
-                    "--color": `linear-gradient(
+                    background: `linear-gradient(
                       180deg,  ${liteColor} 0%,  ${mediumColor} 51%,  ${heavyColor} 100%
                     )`,
                   }}

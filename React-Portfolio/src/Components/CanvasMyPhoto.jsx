@@ -9,11 +9,8 @@ const CanvasMyPhoto = () => {
   // Function to update shadow color based on dark mode
   const changeBgImg = () => {
     const body = document.body;
-    if (body.classList.contains("dark")) {
-      setShadowColor(getComputedStyle(body).getPropertyValue("--text-color").trim());
-    } else {
-      setShadowColor(getComputedStyle(body).getPropertyValue("--hover-color").trim());
-    }
+    const shadow = body.classList.contains("dark")?"--text-color":"--hover-color"
+      setShadowColor(getComputedStyle(body).getPropertyValue(shadow).trim());
   };
 
   // Function to clear and redraw the image with shadow effect
@@ -51,8 +48,9 @@ const CanvasMyPhoto = () => {
       observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
   
       // Cleanup observer on component unmount
+      console.log(shadowHoverColor)
       return () => observer.disconnect();
-   },[])
+   },[shadowHoverColor])
 
   return (
     <canvas ref={canvasRef} id="canv" className="myPhotos" width="320px" height="500px"></canvas>

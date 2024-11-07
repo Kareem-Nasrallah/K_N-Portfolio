@@ -7,6 +7,7 @@ const Header = () => {
     if (moodIcon.current) {
       moodIcon.current.classList.toggle("bx-sun");
       moodIcon.current.classList.toggle("bxs-moon");
+      document.body.classList.toggle("dark");
     }
   };
 

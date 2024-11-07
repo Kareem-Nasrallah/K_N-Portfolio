@@ -1457,7 +1457,6 @@ footer {
   z-index: 110;
   width: 95vw;
   height: 98vh;
-  display: none;
 }
 .theamSettings {
   position: fixed;

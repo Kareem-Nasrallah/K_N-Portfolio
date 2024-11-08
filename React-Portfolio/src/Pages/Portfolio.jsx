@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import PortfolioImage from "../Components/portfolioImage";
-import Colors from "../Components/Colors";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -8,8 +7,6 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <>
-      <Colors />
       <section id="portfolio">
         <div className="main-text">
           <span>What can i do for you</span>
@@ -64,7 +61,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 

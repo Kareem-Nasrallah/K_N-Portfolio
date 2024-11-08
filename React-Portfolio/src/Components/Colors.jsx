@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Colors = ({ fristIn }) => {
+const Colors = () => {
   const allColors = [
     {
       color: "blue",
@@ -28,6 +28,7 @@ const Colors = ({ fristIn }) => {
     },
   ];
 
+  const [activeColor, setActiveColor] = useState(allColors[0].color);
   const themeRef = useRef(null);
   const displaiedDivRef = useRef(null);
 
@@ -45,12 +46,10 @@ const Colors = ({ fristIn }) => {
     displaiedDivRef.current.style.display = "none";
   };
 
-  fristIn
-    ? useEffect(() => {
-        themeRef.current.classList.add("activesetting");
-        displaiedDivRef.current.style.display = "block";
-      }, [])
-    : "";
+  useEffect(() => {
+    themeRef.current.classList.add("activesetting");
+    displaiedDivRef.current.style.display = "block";
+  }, []);
 
   const colorChosen = (color) => {
     themeRef.current.classList.remove("activesetting");
@@ -58,6 +57,7 @@ const Colors = ({ fristIn }) => {
     document.body.className = document.body.classList.contains("dark")
       ? `dark ${color}`
       : color;
+    setActiveColor(color);
   };
 
   return (
@@ -73,7 +73,9 @@ const Colors = ({ fristIn }) => {
             {allColors.map(
               ({ color, liteColor, mediumColor, heavyColor }, i) => (
                 <div
-                  className="colorBox"
+                  className={`colorBox ${
+                    activeColor === color ? "activeColor" : ""
+                  }`}
                   key={i}
                   id={color}
                   onClick={() => colorChosen(color)}

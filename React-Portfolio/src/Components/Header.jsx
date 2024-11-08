@@ -1,8 +1,12 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const moodIcon = useRef(null);
+  const logoRef = useRef(null);
+  const navRef = useRef(null);
+  const menuIcon = useRef(null);
+
   const modeChange = () => {
     if (moodIcon.current) {
       moodIcon.current.classList.toggle("bx-sun");
@@ -11,30 +15,50 @@ const Header = () => {
     }
   };
 
+  const openOrCLose = (e) => {
+    logoRef.current.classList.toggle("openClosLogo");
+    navRef.current.classList.toggle("openMenu");
+    menuIcon.current.classList.toggle("bx-x");
+  };
+
+  const handleScroll = () => {
+    logoRef.current.classList.remove("openClosLogo");
+    navRef.current.classList.remove("openMenu");
+    menuIcon.current.classList.remove("bx-x");
+  };
+
+  useEffect(() => {
+    addEventListener("scroll", handleScroll);
+
+    return () => {
+      removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header>
-      <div id="logo">
+      <div id="logo" ref={logoRef}>
         <h3>
           <span>K N</span>asrallah
         </h3>
       </div>
-      <nav>
+      <nav ref={navRef}>
         <h3 id="menu-logo">
           -- <span>K N</span>asrallah --
         </h3>
-        <NavLink to="/" style={{ i: 1 }}>
+        <NavLink onClick={handleScroll} to="/" style={{ i: 1 }}>
           Home
         </NavLink>
-        <NavLink to="about" style={{ i: 2 }}>
+        <NavLink onClick={handleScroll} to="about" style={{ i: 2 }}>
           About
         </NavLink>
-        <NavLink to="skills" style={{ i: 3 }}>
+        <NavLink onClick={handleScroll} to="skills" style={{ i: 3 }}>
           Skills
         </NavLink>
-        <NavLink to="portfolio" style={{ i: 4 }}>
+        <NavLink onClick={handleScroll} to="portfolio" style={{ i: 4 }}>
           portfolio
         </NavLink>
-        <NavLink to="contact" style={{ i: 5 }}>
+        <NavLink onClick={handleScroll} to="contact" style={{ i: 5 }}>
           Contact
         </NavLink>
         <label
@@ -47,7 +71,12 @@ const Header = () => {
         </label>
         <input type="checkbox" id="modeInput" />
       </nav>
-      <div id="menu-icon" className="bx bx-menu-alt-right" />
+      <div
+        id="menu-icon"
+        ref={menuIcon}
+        className="bx bx-menu-alt-right"
+        onClick={openOrCLose}
+      />
     </header>
   );
 };

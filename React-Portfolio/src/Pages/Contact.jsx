@@ -1,14 +1,27 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [form, setForm] = useState({
+    userName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [contactMessage, setContactMessage] = useState("");
 
   //   Email send functionality
-  const contactForm = useRef(null);
+  const contactFormRef = useRef(null);
+  const contactDataRef = useRef(null);
+
+  useEffect(() => {
+    contactDataRef.current?.classList.add("show-items");
+    contactFormRef.current?.classList.add("show-items");
+    return () => {
+      contactDataRef.current?.classList.remove("show-items");
+      contactFormRef.current?.classList.remove("show-items");
+    };
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -16,18 +29,18 @@ const Contact = () => {
       .sendForm(
         "service_h2w87d8",
         "template_4ewkgnr",
-        contactForm.current,
+        contactFormRef.current,
         "aUxqRxxoMyf0YHj9b"
       )
       .then(
         () => {
-          setContactMessage("Message sent successfully ✅");
+          setContactMessage("✅ Message sent successfully");
           setTimeout(() => setContactMessage(""), 5000);
-          contactForm.current.reset();
+          contactFormRef.current.reset();
         },
         () => {
           setContactMessage(
-            "Message not sent (Email activation period has ended) ❌"
+            "❌ Message not sent (Email activation period has ended)"
           );
         }
       );
@@ -35,7 +48,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="contactData ">
+      <div ref={contactDataRef} className="contactData fromlift">
         <h2>
           <span>Conetact Me</span>
         </h2>
@@ -51,8 +64,8 @@ const Contact = () => {
       <div className="contactMail">
         <h2 className=" ">Send Me A Message</h2>
         <form
-          className=" "
-          ref={contactForm}
+          className="fromright "
+          ref={contactFormRef}
           id="contactForm"
           onSubmit={sendEmail}
         >
@@ -60,8 +73,8 @@ const Contact = () => {
             <div className="contactBox">
               <input
                 className="inputs"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                value={form.userName}
+                onChange={(e) => setForm({ ...form, userName: e.target.value })}
                 type="text"
                 name="user_name"
                 id="name"
@@ -75,8 +88,8 @@ const Contact = () => {
             <div className="contactBox">
               <input
                 className="inputs"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 type="email"
                 name="user_email"
                 id="email"
@@ -91,8 +104,8 @@ const Contact = () => {
           <div className="contactBox">
             <input
               className="inputs"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              value={form.subject}
+              onChange={(e) => setForm({ ...form, subject: e.target.value })}
               type="text"
               name="user_subject"
               id="subject"
@@ -106,8 +119,8 @@ const Contact = () => {
           <div className="contactBox contactTextarea">
             <textarea
               className="inputs"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
               name="user_message"
               id="message"
               placeholder="Message"

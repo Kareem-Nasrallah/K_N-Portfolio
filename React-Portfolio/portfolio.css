@@ -1409,7 +1409,7 @@ footer {
 .scrollScale {
   opacity: 0;
   scale: 0.9;
-  transition: 1.5s;
+  transition-duration: 1.5s;
 }
 .fromright {
   opacity: 0;
@@ -1454,10 +1454,10 @@ footer {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 110;
+  z-index: 140;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: brightness(0.9) blur(2px);
+  backdrop-filter: brightness(0.8) blur(2px);
   display: none;
 }
 .theamSettings {

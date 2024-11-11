@@ -2,20 +2,23 @@ import { useEffect, useRef } from "react";
 import CanvasMyPhoto from "../Components/CanvasMyPhoto";
 
 const About = () => {
-  const aboutRef = useRef(null);
+  const aboutImgRef = useRef(null);
+  const aboutContRef = useRef(null);
   useEffect(() => {
-    aboutRef.current?.classList.add("show-items");
+    aboutImgRef.current?.classList.add("show-items");
+    aboutContRef.current?.classList.add("show-items");
     return () => {
-      aboutRef.current?.classList.remove("show-items");
+      aboutImgRef.current?.classList.remove("show-items");
+      aboutContRef.current?.classList.remove("show-items");
     };
   }, []);
 
   return (
-    <section ref={aboutRef} id="about">
-      <div className="img-about   ">
+    <section id="about">
+      <div ref={aboutImgRef} className="img-about fromlift">
         <CanvasMyPhoto />
       </div>
-      <div className="about-content">
+      <div ref={aboutContRef} className="about-content fromright">
         <span>Let me intteoduce myself</span>
         <h2>
           <span>About Me</span>

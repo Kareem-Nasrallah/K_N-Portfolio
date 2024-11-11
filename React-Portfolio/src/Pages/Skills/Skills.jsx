@@ -1,7 +1,18 @@
+import { useEffect, useRef } from "react";
 import ProfSkill from "../../Components/ProfSkill";
 import TecSkills from "./TecSkills";
 
 const Skills = () => {
+
+  const allSkillsRef = useRef(null);
+
+  useEffect(()=>{
+    allSkillsRef.current?.classList.add("show-items")
+    return ()=>{
+      allSkillsRef.current?.classList.remove("show-items")
+    }
+  },[])
+  
   return (
     <section id="skills">
       <div className="main-text">
@@ -11,7 +22,7 @@ const Skills = () => {
         </h2>
       </div>
       <div className="all-skills">
-        <div className="skill-left">
+        <div ref={allSkillsRef} className="skill-left scrollScale">
           <h3>Tecknical Skills</h3>
           <TecSkills />
         </div>

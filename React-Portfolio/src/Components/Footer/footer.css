@@ -1,9 +1,22 @@
 #copyrightKareem {
-    font-size: 1.1rem;
-  }
+  font-size: 1.1rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 2px solid var(--text-color);
+}
+
+@media (max-width: 991px) {
   footer {
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 2px solid var(--text-color);
+    padding: 0.7rem 0;
   }
-  
+}
+
+@media (max-width: 780px) {
+  footer,
+  footer p {
+    background: var(--mail-bg-color);
+    color: var(--input-color);
+  }
+}

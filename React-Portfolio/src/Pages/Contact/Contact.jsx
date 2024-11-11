@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./contact.css"
+import "./contact.css";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -10,25 +10,22 @@ const Contact = () => {
   });
   const [contactMessage, setContactMessage] = useState("");
 
-  //   Email send functionality
   const contactFormRef = useRef(null);
   const contactDataRef = useRef(null);
 
   useEffect(() => {
     const hide = () => {
       contactFormRef.current?.classList.add("show-items");
-    };
-    const hideData = () => {
       contactDataRef.current?.classList.add("show-items");
     };
     setTimeout(hide, 0);
-    setTimeout(hideData, 500);
     return () => {
       contactDataRef.current?.classList.remove("show-items");
       contactFormRef.current?.classList.remove("show-items");
     };
   });
 
+  //   Email send functionality
   const sendEmail = (e) => {
     e.preventDefault();
 

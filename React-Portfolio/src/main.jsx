@@ -2,9 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import "./styles/colorsRoot.css";
+import "./styles/root.css";
 import "./styles/index.css";
-import "./styles/breakPoints.css";
 
 import App from "./App.jsx";
 

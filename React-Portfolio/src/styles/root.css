@@ -1,0 +1,199 @@
+:root {
+  --text-color: #001a44;
+  --text-porto-color: #02b2df;
+  --text-simi-ten-color: #232f42;
+  --hover-color: #025ac9;
+  --bg-color: #a5cfe5;
+  --header-bg-color: #a5cfe5b6;
+  --menu-bg-color: #a5cfe5c8;
+  --secon-bg-color: #cce0ff;
+  --mail-bg-color: #003;
+  --input-color: #02e1ffc4;
+  --input-plholder-color: #02e1ff5b;
+  --points-color: #012661;
+  --neon-social: 0 0 5px #025ac9;
+  --header-hover: 0 0 10px #02aaff99, 0 0 20px rgba(2, 170, 255, 0.6),
+    0 0 30px rgba(2, 170, 255, 0.6), 0 0 40px rgba(2, 170, 255, 0.6),
+    0 0 70px rgba(2, 170, 255, 0.6), 0 0 80px rgba(2, 170, 255, 0.6),
+    0 0 100px rgba(2, 170, 255, 0.6), 0 0 150px rgba(2, 170, 255, 0.6);
+  --big-font: 3.5rem;
+  --normal-font: 2rem;
+  --animationText-font: 2.5rem;
+  --h3-font: 1.5rem;
+  --hover-box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px,
+    rgba(0, 0, 0, 0.23) 0 6px 6px;
+  --neon-box-shadow: 0 0 10px #025ac9;
+  --neon-box-colors-shadow: 0 0 2rem #023dff;
+  --font-neon-text-shadow: 0 0 10px #025ac94d, 0 0 20px rgba(2, 90, 201, 0.3),
+    0 0 30px rgba(2, 90, 201, 0.3), 0 0 40px rgba(2, 90, 201, 0.3),
+    0 0 70px rgba(2, 90, 201, 0.3), 0 0 80px rgba(2, 90, 201, 0.3),
+    0 0 100px rgba(2, 90, 201, 0.3), 0 0 150px rgba(2, 90, 201, 0.3);
+  --gradient-coler-bg: linear-gradient(
+    180deg,
+    #02e1ff 0%,
+    #0275ff 51%,
+    #023dff 100%
+  );
+}
+
+/* ///////////////  all colors versions  /////////////// */
+.green {
+  --text-color: #012107;
+  --text-porto-color: #02df5e;
+  --text-simi-ten-color: #244b36;
+  --hover-color: #03ad50;
+  --bg-color: #c7ffe1;
+  --header-bg-color: #c7ffe1b6;
+  --menu-bg-color: #c7ffe1c8;
+  --secon-bg-color: #e8ffe7;
+  --mail-bg-color: #020;
+  --neon-social: 0 0 5px #02c95a;
+  --input-color: #17ff02;
+  --input-plholder-color: #3dff025b;
+  --points-color: #013116;
+  --header-hover: 0 0 10px #19bb8599, 0 0 20px rgba(25, 187, 133, 0.6),
+    0 0 30px rgba(25, 187, 133, 0.6), 0 0 40px rgba(25, 187, 133, 0.6),
+    0 0 70px rgba(25, 187, 133, 0.6), 0 0 80px rgba(25, 187, 133, 0.6),
+    0 0 100px rgba(25, 187, 133, 0.6), 0 0 150px rgba(25, 187, 133, 0.6);
+  --neon-box-shadow: 0 0 10px #02c95a;
+  --neon-box-colors-shadow: 0 0 2rem #0bac20;
+  --font-neon-text-shadow: 0 0 10px rgba(2, 201, 90, 0.3),
+    0 0 20px rgba(2, 201, 90, 0.3), 0 0 30px rgba(2, 201, 90, 0.3),
+    0 0 40px rgba(2, 201, 90, 0.3), 0 0 70px rgba(2, 201, 90, 0.3),
+    0 0 80px rgba(2, 201, 90, 0.3), 0 0 100px rgba(2, 201, 90, 0.3),
+    0 0 150px rgba(2, 201, 90, 0.3);
+  --gradient-coler-bg: linear-gradient(
+    180deg,
+    #3fc002 0%,
+    #0bac20 51%,
+    #0e570b 100%
+  );
+}
+.purple {
+  --text-color: #220249;
+  --text-porto-color: #8052ec;
+  --text-simi-ten-color: #34056d;
+  --hover-color: #5a02c9;
+  --secon-bg-color: #cdc6df;
+  --bg-color: #beafe0;
+  --menu-bg-color: #beafe0c8;
+  --header-bg-color: #beafe0b6;
+  --mail-bg-color: #180035;
+  --neon-social: 0 0 5px #5a02c9;
+  --input-color: #8400ff;
+  --input-plholder-color: #7c1eef6b;
+  --points-color: #210741;
+  --header-hover: 0 0 10px rgba(92, 2, 201, 0.45),
+    0 0 20px rgba(90, 2, 201, 0.45), 0 0 30px rgba(90, 2, 201, 0.45),
+    0 0 40px rgba(90, 2, 201, 0.45), 0 0 70px rgba(90, 2, 201, 0.45),
+    0 0 80px rgba(90, 2, 201, 0.45), 0 0 100px rgba(90, 2, 201, 0.45),
+    0 0 150px rgba(90, 2, 201, 0.45);
+  --neon-box-shadow: 0 0 10px #5a02c9;
+  --neon-box-colors-shadow: 0 0 2rem #5a02c9;
+  --font-neon-text-shadow: 0 0 10px rgba(90, 2, 201, 0.3),
+    0 0 20px rgba(90, 2, 201, 0.3), 0 0 30px rgba(90, 2, 201, 0.3),
+    0 0 40px rgba(90, 2, 201, 0.3), 0 0 70px rgba(90, 2, 201, 0.3),
+    0 0 80px rgba(90, 2, 201, 0.3), 0 0 100px rgba(90, 2, 201, 0.3),
+    0 0 150px rgba(90, 2, 201, 0.3);
+  --gradient-coler-bg: linear-gradient(
+    180deg,
+    #a786f5 0%,
+    #5a02c9 51%,
+    #2e055f 100%
+  );
+}
+.orange {
+  --text-color: #4d2f06;
+  --text-porto-color: #d19b08;
+  --text-simi-ten-color: #69592d;
+  --hover-color: #ff5e00;
+  --bg-color: #ffdaa2;
+  --header-bg-color: #ffdaa2b6;
+  --menu-bg-color: #ffdaa2c8;
+  --secon-bg-color: #ffefd6;
+  --mail-bg-color: #301c00;
+  --input-color: #ffbe00;
+  --input-plholder-color: #ffa6006b;
+  --points-color: #4d2f06;
+  --neon-social: 0 0 5px #ff5e00;
+  --header-hover: 0 0 10px rgba(228, 170, 100, 0.6),
+    0 0 20px rgba(228, 170, 100, 0.6), 0 0 30px rgba(228, 170, 100, 0.6),
+    0 0 60px rgba(228, 170, 100, 0.6), 0 0 70px rgba(228, 170, 100, 0.6),
+    0 0 100px rgba(228, 170, 100, 0.6), 0 0 100px rgba(228, 170, 100, 0.6),
+    0 0 150px rgba(228, 170, 100, 0.6);
+  --neon-box-shadow: 0 0 10px #ff5e00;
+  --neon-box-colors-shadow: 0 0 2rem #ff5e00;
+  --font-neon-text-shadow: 0 0 10px rgba(255, 94, 0, 0.302),
+    0 0 20px rgba(255, 94, 0, 0.3), 0 0 30px rgba(255, 94, 0, 0.3),
+    0 0 40px rgba(255, 94, 0, 0.3), 0 0 70px rgba(255, 94, 0, 0.3),
+    0 0 80px rgba(255, 94, 0, 0.3), 0 0 100px rgba(255, 94, 0, 0.3),
+    0 0 150px rgba(255, 94, 0, 0.3);
+  --gradient-coler-bg: linear-gradient(
+    180deg,
+    #ffa500 0%,
+    #ff7500 51%,
+    #ff3500 100%
+  );
+}
+.blue.dark {
+  --hover-color: #0099ff;
+  --text-color: #0357dd;
+}
+.green.dark {
+  --text-color: #1b902e;
+  --hover-color: #00ff22;
+}
+.orange.dark {
+  --text-color: #bd6e00;
+  --hover-color: #ffb937;
+}
+.purple.dark {
+  --text-color: #5300b9;
+  --hover-color: #9034ff;
+}
+.dark {
+  --bg-color: #000;
+  --header-bg-color: #000000b6;
+  --menu-bg-color: #000000c8;
+  --secon-bg-color: #101010;
+  --text-simi-ten-color: var(--text-color);
+}
+#modeInput {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --big-font: 3rem;
+    --normal-font: 1.8em;
+    --h3-font: 1.3rem;
+    --animationText-font: 2.2rem;
+  }
+}
+
+@media (780px < width < 850px) {
+  :root {
+    --big-font: 2.7rem;
+    --normal-font: 1.7em;
+    --h3-font: 1.2rem;
+    --animationText-font: 1.9rem;
+  }
+}
+
+@media (max-width: 510px) {
+  :root {
+    --big-font: 2.7rem;
+    --normal-font: 1.7rem;
+    --h3-font: 1.2rem;
+    --animationText-font: 1.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --big-font: 2.5rem;
+    --normal-font: 1.6rem;
+    --h3-font: 1.1rem;
+    --animationText-font: 1.7rem;
+  }
+}

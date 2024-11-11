@@ -1,98 +1,112 @@
 #portfolio {
-    background: var(--secon-bg-color);
-  }
-  .filter-buttons {
-    text-align: center;
-    margin: 2rem 0;
-  }
-  .filter-buttons > button {
-    margin: 5px 0.7rem;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    color: var(--text-color);
-  }
-  .filter-buttons > button:hover {
-    color: var(--hover-color);
+  background: var(--secon-bg-color);
+}
+.filter-buttons {
+  text-align: center;
+  margin: 2rem 0;
+}
+.filter-buttons > button {
+  margin: 5px 0.7rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text-color);
+}
+.filter-buttons > button:hover {
+  color: var(--hover-color);
+}
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  gap: 2rem;
+}
+.port-box {
+  min-height: 11.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--hover-color);
+  box-shadow: var(--neon-box-shadow);
+  position: relative;
+}
+.port-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.port-box:hover img {
+  transform: scale(1.2);
+}
+.port-image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5s;
+  transition: 0.5s;
+}
+.port-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), var(--text-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+  padding: 0 2rem;
+}
+.port-box:hover .port-content {
+  opacity: 1;
+}
+.port-content h3 {
+  font-size: var(--h3-font);
+  font-weight: 600;
+  color: var(--text-porto-color);
+}
+.port-content p {
+  color: var(--text-porto-color);
+  font-size: 0.8rem;
+  margin: 5px 0 15px 0;
+}
+.port-content a {
+  background: var(--secon-bg-color);
+  border-radius: 50%;
+  margin: 0 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--text-color);
+  outline: 2px solid var(--secon-bg-color);
+  box-shadow: var(--hover-box-shadow);
+}
+.port-content a i {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+@media (780px < width < 1153px) {
+  #portfolio {
+    padding-top: 7%;
   }
   .portfolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(270px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
-  .port-box {
-    min-height: 11.5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border: 2px solid var(--hover-color);
-    box-shadow: var(--neon-box-shadow);
-    position: relative;
+}
+
+@media (max-width: 780px) {
+  .portfolio-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
-  .port-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-  .port-box:hover img {
-    transform: scale(1.2);
-  }
-  .port-image img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5s;
-    transition: 0.5s;
-  }
-  .port-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--text-color));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    transition: 0.5s;
-    padding: 0 2rem;
-  }
-  .port-box:hover .port-content {
-    opacity: 1;
-  }
-  .port-content h3 {
-    font-size: var(--h3-font);
-    font-weight: 600;
-    color: var(--text-porto-color);
-  }
-  .port-content p {
-    color: var(--text-porto-color);
-    font-size: 0.8rem;
-    margin: 5px 0 15px 0;
-  }
-  .port-content a {
-    background: var(--secon-bg-color);
-    border-radius: 50%;
-    margin: 0 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid var(--text-color);
-    outline: 2px solid var(--secon-bg-color);
-    box-shadow: var(--hover-box-shadow);
-  }
-  .port-content a i {
-    font-size: 1.5rem;
-    color: var(--text-color);
-  }
-  
+}

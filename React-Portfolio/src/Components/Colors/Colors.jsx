@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./colors.css";
 
 const Colors = () => {
   const allColors = [
@@ -30,30 +31,39 @@ const Colors = () => {
 
   const [activeColor, setActiveColor] = useState(allColors[0].color);
   const themeRef = useRef(null);
-  const displaiedDivRef = useRef(null);
+  const displayedDivRef = useRef(null);
 
   const toggleBtnColor = () => {
-    themeRef.current.classList.toggle("activesetting");
-    displaiedDivRef.current.style.display = themeRef.current.classList.contains(
-      "activesetting"
-    )
+    themeRef.current?.classList.toggle("activesetting");
+
+    const isAppear = themeRef.current?.classList.contains("activesetting")
       ? "block"
       : "none";
-  };
 
-  onscroll = () => {
-    themeRef.current.classList.remove("activesetting");
-    displaiedDivRef.current.style.display = "none";
+    displayedDivRef.current.style.display = isAppear;
   };
 
   useEffect(() => {
     themeRef.current.classList.add("activesetting");
-    displaiedDivRef.current.style.display = "block";
-  }, []);
+    displayedDivRef.current.style.display = "block";
+
+    const scrolling = () => {
+      if (themeRef.current.classList.contains("activesetting")) {
+        themeRef.current.classList.remove("activesetting");
+        displayedDivRef.current.style.display = "none";
+      }
+    };
+
+    addEventListener("scroll", scrolling);
+
+    return () => {
+      removeEventListener("scroll", scrolling);
+    };
+  }, [themeRef]);
 
   const colorChosen = (color) => {
     themeRef.current.classList.remove("activesetting");
-    displaiedDivRef.current.style.display = "none";
+    displayedDivRef.current.style.display = "none";
     document.body.className = document.body.classList.contains("dark")
       ? `dark ${color}`
       : color;
@@ -62,7 +72,7 @@ const Colors = () => {
 
   return (
     <div>
-      <div id="displaiedpage" ref={displaiedDivRef} />
+      <div id="displaiedpage" ref={displayedDivRef} />
       <div ref={themeRef} className="theamSettings">
         <div className="togglebtn" onClick={toggleBtnColor}>
           <i className="bx bxs-cog" />

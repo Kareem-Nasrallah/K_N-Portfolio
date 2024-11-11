@@ -1,0 +1,87 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 10%;
+    background: var(--header-bg-color);
+    backdrop-filter: blur(5px) saturate(1.5);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 120;
+  }
+  #menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    z-index: 122;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 5px;
+    color: var(--secon-bg-color);
+    animation: movingEachANav 1.5s forwards;
+  }
+  #menu-logo {
+    display: none;
+  }
+  header h3 {
+    display: inline;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+  }
+  span,
+  #copyrightKareem {
+    color: transparent;
+    background: var(--gradient-coler-bg);
+    -webkit-text-stroke: 0.05vw var(--text-color);
+    background-clip: text;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    padding: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0;
+    animation: movingEachANav 1.5s forwards;
+    animation-delay: calc(0.2s * var(--i));
+  }
+  .mode {
+    height: fit-content;
+    font-size: 1.5rem;
+    padding: 10px 0 10px 15px;
+    cursor: pointer;
+  }
+  .mode i {
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 1s, color 1s, scale 0.5s, box-shadow 0.5s;
+    border: 2px solid var(--text-color);
+  }
+  .bxs-moon {
+    background: var(--text-color);
+    color: var(--secon-bg-color);
+  }
+  .bx-sun {
+    background: var(--secon-bg-color);
+    color: var(--hover-color);
+  }
+  .mode:hover i {
+    box-shadow: var(--neon-box-shadow);
+    scale: 1.1;
+  }
+  nav > a:hover {
+    color: var(--hover-color);
+    letter-spacing: 0.5px;
+    text-shadow: var(--header-hover);
+  }
+  .active {
+    color: var(--hover-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+  }

@@ -1406,7 +1406,7 @@ footer {
 /* ///////////////    parallax    ////////////////////// */
 .scrollScale {
   opacity: 0;
-  scale: 0.9;
+  scale: 0.95;
   transition: 1.5s;
 }
 .fromright {

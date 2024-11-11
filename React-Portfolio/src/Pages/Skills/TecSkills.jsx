@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const TecSkills = () => {
+
+  const tecSkillsRef = useRef(null);
+
+  useEffect(() => {
+    const hide = () => {
+      tecSkillsRef.current?.classList.add("show-items");
+    };
+    setTimeout(hide, 0);
+    return () => {
+      tecSkillsRef.current?.classList.remove("show-items");
+    };
+  }, []);
+
   const skillsInfo = [
     {
       imgId: "bxl-react",
@@ -50,7 +63,7 @@ const TecSkills = () => {
   });
 
   return (
-    <div id="tec-skills">
+    <div ref={tecSkillsRef} id="tec-skills" className="scrollScale">
       {TecSkillsFunc}
     </div>
   );

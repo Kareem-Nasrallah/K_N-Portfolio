@@ -1,37 +1,19 @@
 import { useEffect, useRef } from "react";
-import CanvasMyPhoto from "../Components/CanvasMyPhoto";
+import CanvasMyPhoto from "../../Components/CanvasMyPhoto";
+import "./home.css"
 
 const Home = () => {
-  
-  const homeImgRef = useRef(null)
-  const homeContRef = useRef(null)
+  const homeImgRef = useRef(null);
+  const homeContRef = useRef(null);
 
-  useEffect(()=>{
-
-    if (!homeImgRef.current || !homeContRef.current) return;
-
-    const apearElementes = ()=>{
-      homeImgRef.current?.classList.add("show-items")
-      homeContRef.current?.classList.add("show-items")
-    }
-
-    const observer = new MutationObserver((mutationsList)=>{
-      for (const mutation  of mutationsList) {
-        if(mutation.type === 'childList'){
-          apearElementes();
-        }
-      }
-    })
-
-    if(homeContRef && homeImgRef){
-      observer.observe(homeContRef,{attributes: true})
-      observer.observe(homeImgRef,{attributes: true})
-    }
-
-    return()=>{
-      observer.disconnect
-    }
-  },[homeContRef,])
+  useEffect(() => {
+    homeImgRef.current?.classList.add("show-items");
+    homeContRef.current?.classList.add("show-items");
+    return () => {
+      homeImgRef.current?.classList.remove("show-items");
+      homeContRef.current?.classList.remove("show-items");
+    };
+  }, []);
 
   return (
     <section id="home">

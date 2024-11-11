@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./contact.css"
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -14,8 +15,14 @@ const Contact = () => {
   const contactDataRef = useRef(null);
 
   useEffect(() => {
-    contactDataRef.current?.classList.add("show-items");
-    contactFormRef.current?.classList.add("show-items");
+    const hide = () => {
+      contactFormRef.current?.classList.add("show-items");
+    };
+    const hideData = () => {
+      contactDataRef.current?.classList.add("show-items");
+    };
+    setTimeout(hide, 0);
+    setTimeout(hideData, 500);
     return () => {
       contactDataRef.current?.classList.remove("show-items");
       contactFormRef.current?.classList.remove("show-items");
@@ -48,7 +55,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div ref={contactDataRef} className="contactData fromlift">
+      <div ref={contactDataRef} className="contactData fromright">
         <h2>
           <span>Conetact Me</span>
         </h2>

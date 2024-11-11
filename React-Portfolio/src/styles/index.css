@@ -1,0 +1,101 @@
+/* ///////////////  import fonts   /////////////// */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+
+/* ///////////////  global rules  /////////////// */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: var(--text-color);
+}
+body {
+  position: relative;
+  background: var(--bg-color);
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+section {
+  padding: 5% 10% 4%;
+  margin-top: 12px;
+  min-height: 90vh;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hover-color);
+  border-radius: 5rem;
+}
+
+/* img-box */
+
+.home-image {
+  position: relative;
+  bottom: 20px;
+}
+.img-about,
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myPhotos {
+  mask-image: linear-gradient(
+    to bottom,
+    var(--hover-color) 80%,
+    transparent 100%
+  );
+}
+
+
+/* ///////////////    parallax    ////////////////////// */
+.scrollScale {
+  opacity: 0;
+  scale: 0.95;
+  transition-duration: 1.5s;
+}
+.fromright {
+  opacity: 0;
+  translate: 1rem 1rem;
+  transition: 1.5s;
+}
+.fromlift {
+  opacity: 0;
+  translate: -1rem 1rem;
+  transition: 1.5s;
+}
+.show-items {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+@keyframes movingEachANav {
+  from {
+    opacity: 0;
+    translate: 4rem 1rem;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes movingLogo {
+  from {
+    opacity: 0;
+    translate: -4rem 1rem;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

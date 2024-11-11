@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import CanvasMyPhoto from "../Components/CanvasMyPhoto";
+import CanvasMyPhoto from "../../Components/CanvasMyPhoto";
+import "./about.css"
 
 const About = () => {
   const aboutImgRef = useRef(null);

@@ -1,13 +1,14 @@
-import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
+
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Colors from "./Components/Colors/Colors";
+
+import Home from "./Pages/Home/Home";
+import Contact from "./Pages/Contact/Contact";
+import About from "./Pages/About/About";
 import Skills from "./Pages/Skills/Skills";
-import Portfolio from "./Pages/Portfolio";
-import Colors from "./Components/Colors";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 
 function App() {
   return (

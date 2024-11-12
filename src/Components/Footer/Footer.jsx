@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const Footer = () => {
@@ -6,9 +7,9 @@ const Footer = () => {
       <p>
         copyright © 2024 by{" "}
         <span>
-          <a id="copyrightKareem" href="./index.html">
+          <Link id="copyrightKareem" to="/">
             K_Nasrallah
-          </a>
+          </Link>
         </span>{" "}
         || All Right Reserved
       </p>

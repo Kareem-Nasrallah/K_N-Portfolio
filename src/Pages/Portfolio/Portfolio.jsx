@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import PortfolioImage from "../../Components/portfolioImage";
+import PortfolioImage from "../../Components/PortfolioImage";
 import "./portfolio.css"
 
 const Portfolio = () => {

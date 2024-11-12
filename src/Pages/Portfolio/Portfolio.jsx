@@ -1,16 +1,26 @@
 import { useEffect, useRef } from "react";
 import PortfolioImage from "../../Components/PortfolioImage";
-import "./portfolio.css"
+import mixitup from "mixitup";
+import "./portfolio.css";
 
 const Portfolio = () => {
   const galleryRef = useRef(null);
 
   useEffect(() => {
-    mixitup(".portfolio-gallery");
-    const hide = () => {
+    if (galleryRef.current) {
+      mixitup(galleryRef.current, {
+        selectors: {
+          target: ".portfolio-item",
+        },
+        animation: {
+          duration: 700,
+        },
+      });
+    }
+    const show = () => {
       galleryRef.current?.classList.add("show-items");
     };
-    setTimeout(hide, 0);
+    setTimeout(show, 0);
     return () => {
       galleryRef.current?.classList.remove("show-items");
     };

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import CanvasMyPhoto from "../../Components/CanvasMyPhoto";
-import "./home.css"
+import "./home.css";
 
 const Home = () => {
   const homeImgRef = useRef(null);
@@ -30,7 +30,7 @@ const Home = () => {
           Skilled in crafting user-friendly interfaces and passionate about
           delivering seamless user experiences.
         </p>
-        <a download href="./K_Nasrallah's CV.pdf" className="btn">
+        <a download href="/Kareem Nasrallah.pdf" className="btn">
           Download CV <i className="bx bx-download" />
         </a>
         <div className="social-icons">

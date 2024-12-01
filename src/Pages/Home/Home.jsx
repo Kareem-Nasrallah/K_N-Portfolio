@@ -24,11 +24,14 @@ const Home = () => {
           <h2>Front-end Developer</h2>
         </div>
         <p>
-          Front-end developer with advanced web development training, with a
-          focus on creating responsive applications.
+          React Developer with a strong foundation in front-end development.
+          Skilled in building dynamic, responsive applications and crafting
+          interactive, user-friendly interfaces using React and modern
+          JavaScript technologies.
           <br />
-          Skilled in crafting user-friendly interfaces and passionate about
-          delivering seamless user experiences.
+          Passionate about delivering seamless user experiences, staying updated
+          with emerging technologies, and continuously enhancing skills through
+          self-development and practical projects.
         </p>
         <a download href="/Kareem Nasrallah.pdf" className="btn">
           Download CV <i className="bx bx-download" />

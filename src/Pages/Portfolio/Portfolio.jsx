@@ -46,37 +46,37 @@ const Portfolio = () => {
             category="React"
             projectName="NatureNest Realty"
             proDescribing="A site for real estate trade and investment"
-            hosting={false}
+            gitHosting={false}
           />
           <PortfolioImage
             category="Interactive CRUDS"
             projectName="New Horizons"
             proDescribing="A travel and adventure website"
-            hosting={true}
+            gitHosting={true}
           />
           <PortfolioImage
             category="React Interactive"
             projectName="Prayar Time"
             proDescribing="A website displaying a prayer times API"
-            hosting={false}
+            vercelHosting={true}
           />
           <PortfolioImage
             category=""
             projectName="Tazza"
             proDescribing="An e-commerce site for vegetables and fruits"
-            hosting={true}
+            gitHosting={true}
           />
           <PortfolioImage
             category="CRUDS Interactive"
             projectName="CRUDS"
             proDescribing="Merchandise store"
-            hosting={true}
+            gitHosting={true}
           />
           <PortfolioImage
             category="Interactive"
             projectName="Editor"
             proDescribing="A site for uploading and editing images"
-            hosting={true}
+            gitHosting={true}
           />
         </div>
       </div>

@@ -26,10 +26,7 @@ const PortfolioImage = (props) => {
               </a>
             )}
             {props.vercelHosting && (
-              <a
-                href={`https://prayar-time.vercel.app/`}
-                target="_blank"
-              >
+              <a href={props.vercelHosting} target="_blank">
                 <i className="bx bx-link-external"></i>
               </a>
             )}

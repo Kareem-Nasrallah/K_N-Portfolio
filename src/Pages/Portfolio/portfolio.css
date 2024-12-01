@@ -57,6 +57,7 @@
   height: 100%;
   opacity: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.2), var(--text-color));
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;

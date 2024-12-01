@@ -38,10 +38,16 @@ const Portfolio = () => {
         <div className="filter-buttons">
           <button data-filter="all">All</button>
           <button data-filter=".React">React App</button>
-          <button data-filter=".Interactive">Interactive</button>
+          <button data-filter=".API">API Fetch</button>
           <button data-filter=".CRUDS">CRUDS</button>
         </div>
         <div ref={galleryRef} className="portfolio-gallery scrollScale">
+          <PortfolioImage
+            category="React API"
+            projectName="E-Books"
+            proDescribing="Free site to read e-books and enter the readers' community"
+            vercelHosting="e-books-tawny.vercel.app"
+          />
           <PortfolioImage
             category="React"
             projectName="NatureNest Realty"
@@ -49,16 +55,16 @@ const Portfolio = () => {
             gitHosting={false}
           />
           <PortfolioImage
-            category="Interactive CRUDS"
+            category="CRUDS API"
             projectName="New Horizons"
             proDescribing="A travel and adventure website"
             gitHosting={true}
           />
           <PortfolioImage
-            category="React Interactive"
+            category="React API"
             projectName="Prayar Time"
             proDescribing="A website displaying a prayer times API"
-            vercelHosting={true}
+            vercelHosting="prayar-time.vercel.app"
           />
           <PortfolioImage
             category=""
@@ -67,15 +73,9 @@ const Portfolio = () => {
             gitHosting={true}
           />
           <PortfolioImage
-            category="CRUDS Interactive"
+            category="CRUDS"
             projectName="CRUDS"
             proDescribing="Merchandise store"
-            gitHosting={true}
-          />
-          <PortfolioImage
-            category="Interactive"
-            projectName="Editor"
-            proDescribing="A site for uploading and editing images"
             gitHosting={true}
           />
         </div>

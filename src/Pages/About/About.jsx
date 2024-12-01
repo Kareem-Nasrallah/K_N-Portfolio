@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import CanvasMyPhoto from "../../Components/CanvasMyPhoto";
-import "./about.css"
+import "./about.css";
 
 const About = () => {
   const aboutImgRef = useRef(null);
@@ -24,19 +24,17 @@ const About = () => {
         <h2>
           <span>About Me</span>
         </h2>
-        <h3>A story of good</h3>
+        <h3>A Story of Growth</h3>
         <p>
-          I came to this field in which I find my passion and I am ready to put
-          all my energy into working in it.
-          <br />
-          Im a junier Front-end developer with advanced web development
-          training, with a focus on creating responsive applications.
-          <br />
-          Skilled in crafting user-friendly interfaces and passionate about
-          delivering seamless user experiences. <br />I have a passion for
-          learning new technologies and gaining new experiences, as well as
-          regularity and a desire for self-development. <br />
-          Quick adaptation to different work environments.
+          I came to this field where I found my passion, and I am ready to
+          dedicate all my energy to excelling in it. <br />
+          I'm a Junior React Developer with advanced web development training,
+          specializing in creating dynamic, responsive applications. <br />
+          Skilled in crafting interactive, user-friendly interfaces and
+          passionate about delivering seamless user experiences. <br />
+          I am enthusiastic about learning new technologies, gaining valuable
+          experiences, and continually striving for self-improvement. <br />
+          Adaptable to diverse work environments and committed to growth.
         </p>
         <a className="btn" href="#">
           Read More!

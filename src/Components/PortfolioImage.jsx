@@ -12,7 +12,11 @@ const PortfolioImage = (props) => {
           <p>{props.proDescribing}</p>
           <div className="portoLinks">
             <a
-              href={`https://github.com/Kareem-Nasrallah/${props.projectName}`}
+              href={
+                props.githupLink
+                  ? props.githupLink
+                  : `https://github.com/Kareem-Nasrallah/${props.projectName}`
+              }
               target="_blank"
             >
               <i className="bx bxl-github"></i>

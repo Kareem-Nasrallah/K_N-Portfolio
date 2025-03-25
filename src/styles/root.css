@@ -1,6 +1,6 @@
 :root {
   --text-color: #001a44;
-  --text-porto-color: #02b2df;
+  --text-porto-color: #01e1ff;
   --text-simi-ten-color: #232f42;
   --hover-color: #025ac9;
   --bg-color: #a5cfe5;
@@ -39,7 +39,7 @@
 /* ///////////////  all colors versions  /////////////// */
 .green {
   --text-color: #012107;
-  --text-porto-color: #02df5e;
+  --text-porto-color: #00ff80;
   --text-simi-ten-color: #244b36;
   --hover-color: #03ad50;
   --bg-color: #c7ffe1;
@@ -71,7 +71,7 @@
 }
 .purple {
   --text-color: #220249;
-  --text-porto-color: #8052ec;
+  --text-porto-color: rgb(196, 151, 255);
   --text-simi-ten-color: #34056d;
   --hover-color: #5a02c9;
   --secon-bg-color: #cdc6df;
@@ -104,7 +104,7 @@
 }
 .orange {
   --text-color: #4d2f06;
-  --text-porto-color: #d19b08;
+  --text-porto-color: #ffbb00;
   --text-simi-ten-color: #69592d;
   --hover-color: #ff5e00;
   --bg-color: #ffdaa2;

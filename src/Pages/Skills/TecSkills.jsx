@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 const TecSkills = () => {
-
   const tecSkillsRef = useRef(null);
 
   useEffect(() => {
@@ -16,8 +15,12 @@ const TecSkills = () => {
 
   const skillsInfo = [
     {
-      imgId: "bxl-react",
-      name: "React",
+      imgId: "next",
+      name: "Next",
+    },
+    {
+      imgId: "bxl-typescript",
+      name: "typescript",
     },
     {
       imgId: "bxl-css3",
@@ -26,6 +29,10 @@ const TecSkills = () => {
     {
       imgId: "bxl-html5",
       name: "HTML 5",
+    },
+    {
+      imgId: "bxl-react",
+      name: "React",
     },
     {
       imgId: "bxl-javascript",
@@ -40,12 +47,16 @@ const TecSkills = () => {
       name: "git",
     },
     {
-      imgId: "bxl-typescript",
-      name: "typescript",
+      imgId: "bxl-redux",
+      name: "redux",
     },
     {
       imgId: "bxl-bootstrap",
       name: "Bootstrap",
+    },
+    {
+      imgId: "bxl-tailwind-css",
+      name: "tailwind",
     },
     {
       imgId: "bxl-github",
@@ -56,7 +67,9 @@ const TecSkills = () => {
   const TecSkillsFunc = skillsInfo.map((skillInfo, index) => {
     return (
       <div className="skill-box" key={index}>
-        <i className={`bx ${skillInfo.imgId} after`}></i>
+        <i className={`bx ${skillInfo.imgId} after`}>
+          {skillInfo.name === "Next" && <p>N</p>}
+        </i>
         <p>{skillInfo.name}</p>
       </div>
     );

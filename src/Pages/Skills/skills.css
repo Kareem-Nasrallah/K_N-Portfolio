@@ -24,7 +24,7 @@
 /* ///////////////  Left skills   ////////////////////// */
 #tec-skills {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
 }
 .skill-box {
@@ -42,13 +42,14 @@
 .bxl-css3 {
   color: #224bff;
 }
-.bxl-react {
-  color: #087ea4;
-}
+.bxl-redux,
 .bxl-bootstrap {
   color: #7537e1;
 }
-
+.bxl-react,
+.bxl-tailwind-css {
+  color: rgb(0, 195, 255);
+}
 .after {
   position: relative;
   z-index: 5;
@@ -73,8 +74,35 @@
   height: 53%;
   border-radius: 25%;
 }
+.next {
+  width: 40px;
+  height: 60px;
+  font-size: 2.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.next p {
+  color: #ffffff;
+}
+.next:after {
+  background: #000;
+  top: -7.5%;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  border-radius: 50%;
+}
+.bxl-tailwind-css::after,
+.bxl-redux::after {
+  top: 1%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+}
 .bxl-react::after {
-  background: #222222;
   top: -2%;
   left: 0%;
   width: 100%;

@@ -37,46 +37,51 @@ const Portfolio = () => {
       <div className="container">
         <div className="filter-buttons">
           <button data-filter="all">All</button>
+          <button data-filter=".Next">Next App</button>
           <button data-filter=".React">React App</button>
           <button data-filter=".API">API Fetch</button>
-          <button data-filter=".CRUDS">CRUDS</button>
+          <button data-filter=".Cart">Cart</button>
+          <button data-filter=".Authentication">Authentication</button>
         </div>
         <div ref={galleryRef} className="portfolio-gallery scrollScale">
+          <PortfolioImage
+            category="Next API Cart Authentication"
+            projectName="Next Amazon"
+            proDescribing="E-commerce site similar to Amazon"
+            githupLink="https://github.com/Kareem-Nasrallah/next-amazon"
+            vercelHosting="https://next-amazon-lake.vercel.app"
+          />
           <PortfolioImage
             category="React API"
             projectName="E-Books"
             proDescribing="Free site to read e-books and enter the readers' community"
-            vercelHosting="e-books-tawny.vercel.app"
+            vercelHosting="https://e-books-tawny.vercel.app"
           />
           <PortfolioImage
-            category="React"
+            category="React API Authentication"
             projectName="NatureNest Realty"
-            proDescribing="A site for real estate trade and investment"
-            gitHosting={false}
+            proDescribing="A platform for buying, selling, and exploring real estate listings."
+            githupLink="https://github.com/Kareem-Nasrallah/naturenest_realty_frontend"
           />
           <PortfolioImage
-            category="CRUDS API"
-            projectName="New Horizons"
-            proDescribing="A travel and adventure website"
-            gitHosting={true}
+            category="React Cart"
+            projectName="Flavoro Foods"
+            proDescribing="Food shopping site"
+            vercelHosting="https://flavoro-foods.vercel.app"
+            githupLink="https://github.com/Kareem-Nasrallah/flavoro-foods"
           />
           <PortfolioImage
             category="React API"
-            projectName="Prayar Time"
-            proDescribing="A website displaying a prayer times API"
-            vercelHosting="prayar-time.vercel.app"
+            projectName="Rnscinemas"
+            proDescribing="A site showcasing current and upcoming movies in cinemas, along with cinema locations."
+            vercelHosting="https://rnscinemas.vercel.app/"
           />
           <PortfolioImage
-            category=""
-            projectName="Tazza"
-            proDescribing="An e-commerce site for vegetables and fruits"
-            gitHosting={true}
-          />
-          <PortfolioImage
-            category="CRUDS"
-            projectName="CRUDS"
-            proDescribing="Merchandise store"
-            gitHosting={true}
+            category="Cart"
+            projectName="New Horizons"
+            proDescribing="A site for booking adventure trips, games, and buying adventure gear."
+            vercelHosting="https://new-horizons-sandy.vercel.app"
+            githupLink="https://github.com/Kareem-Nasrallah/New-Horizons"
           />
         </div>
       </div>

@@ -1,4 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import {
+  SiNextdotjs,
+  SiFormik,
+  SiTailwindcss,
+  SiTypescript,
+  SiJavascript,
+  SiBootstrap,
+  SiPyup,
+  SiGit,
+  SiHtml5,
+  SiGithub,
+  SiGitlab,
+  SiReact,
+  SiCss3,
+  SiSass,
+  SiRedux,
+} from "react-icons/si";
 
 const TecSkills = () => {
   const tecSkillsRef = useRef(null);
@@ -15,66 +32,87 @@ const TecSkills = () => {
 
   const skillsInfo = [
     {
-      imgId: "next",
+      icon: <SiNextdotjs className="iconComponent next" />,
       name: "Next",
+      parintClass: "next",
     },
     {
-      imgId: "bxl-typescript",
-      name: "typescript",
-    },
-    {
-      imgId: "bxl-css3",
-      name: "CSS 3",
-    },
-    {
-      imgId: "bxl-html5",
-      name: "HTML 5",
-    },
-    {
-      imgId: "bxl-react",
+      icon: <SiReact className="iconComponent react" />,
       name: "React",
+      parintClass: "react",
     },
     {
-      imgId: "bxl-javascript",
-      name: "javascript",
+      icon: <SiTypescript className="iconComponent typescript" />,
+      name: "Typescript",
+      parintClass: "typescript",
     },
     {
-      imgId: "bxl-sass",
-      name: "scss",
+      icon: <SiJavascript className="iconComponent javascript" />,
+      name: "Javascript",
+      parintClass: "javascript",
     },
     {
-      imgId: "bxl-git",
-      name: "git",
+      icon: <SiRedux className="iconComponent redux-toolkit" />,
+      name: "Redux Toolkit",
+      parintClass: "redux-toolkit",
     },
     {
-      imgId: "bxl-redux",
-      name: "redux",
+      icon: <SiFormik className="iconComponent formik" />,
+      name: "Formik",
+      parintClass: "formik",
     },
     {
-      imgId: "bxl-bootstrap",
+      icon: <SiCss3 className="iconComponent css" />,
+      name: "CSS 3",
+      parintClass: "css",
+    },
+    {
+      icon: <SiSass className="iconComponent scss" />,
+      name: "SCSS",
+      parintClass: "scss",
+    },
+    {
+      icon: <SiBootstrap className="iconComponent bootstrap" />,
       name: "Bootstrap",
+      parintClass: "bootstrap",
     },
     {
-      imgId: "bxl-tailwind-css",
-      name: "tailwind",
+      icon: <SiTailwindcss className="iconComponent tailwind" />,
+      name: "Tailwindcss",
+      parintClass: "tailwind",
     },
     {
-      imgId: "bxl-github",
-      name: "gitHub",
+      icon: <SiHtml5 className="iconComponent html" />,
+      name: "HTML 5",
+      parintClass: "html",
+    },
+    {
+      icon: <SiGit className="iconComponent git" />,
+      name: "Git",
+      parintClass: "git",
+    },
+    {
+      icon: <SiGithub className="iconComponent github" />,
+      name: "GitHub",
+      parintClass: "github",
+    },
+    {
+      icon: <SiGitlab className="iconComponent gitlap" />,
+      name: "GitLap",
+      parintClass: "gitlap",
     },
   ];
 
   const TecSkillsFunc = skillsInfo.map((skillInfo, index) => {
     return (
       <div className="skill-box" key={index}>
-        <i className={`bx ${skillInfo.imgId} after`}>
-          {skillInfo.name === "Next" && <p>N</p>}
-        </i>
+        <span className={`after after-${skillInfo.parintClass}`}>
+          {skillInfo.icon}
+        </span>
         <p>{skillInfo.name}</p>
       </div>
     );
   });
-
   return (
     <div ref={tecSkillsRef} id="tec-skills" className="scrollScale">
       {TecSkillsFunc}

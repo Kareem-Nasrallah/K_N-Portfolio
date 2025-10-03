@@ -73,16 +73,21 @@
   font-size: var(--h3-font);
   font-weight: 600;
   color: var(--text-porto-color);
+  margin-bottom: 5px;
 }
 .port-content p {
   color: var(--text-porto-color);
   font-size: 0.8rem;
-  margin: 5px 0 15px 0;
+  margin-bottom: 10px;
+}
+.port-content p b{
+  color: var(--text-porto-color);
+  text-decoration: underline;
 }
 .port-content a {
   background: var(--secon-bg-color);
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 10px 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;

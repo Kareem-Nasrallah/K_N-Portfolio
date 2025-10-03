@@ -1,11 +1,10 @@
 #home {
-  height: 80%;
-  width: 100%;
   display: grid;
   padding-top: 6%;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
   gap: 5rem;
+  min-height: calc(100vh - 71px);
 }
 .home-content {
   max-width: 544px;
@@ -17,6 +16,10 @@
 .home-content h1 {
   font-size: var(--big-font);
   text-wrap: nowrap;
+}
+.home-content p {
+  line-height: 1.6rem;
+  margin-bottom: .5rem;
 }
 .text-animate {
   width: fit-content;
@@ -81,9 +84,6 @@
   }
 }
 
-.home-content p {
-  line-height: 1.6rem;
-}
 .btn {
   display: block;
   width: 11rem;

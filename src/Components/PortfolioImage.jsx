@@ -9,7 +9,12 @@ const PortfolioImage = (props) => {
         </div>
         <div className="port-content">
           <h3>{props.projectName}</h3>
-          <p>{props.proDescribing}</p>
+          <p>
+            <b>Description</b> : {props.proDescribing}
+          </p>
+          <p>
+            <b>Technologies</b> : {props.technologies}
+          </p>
           <div className="portoLinks">
             <a
               href={

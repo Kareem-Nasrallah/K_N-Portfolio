@@ -23,7 +23,7 @@ const Contact = () => {
       contactDataRef.current?.classList.remove("show-items");
       contactFormRef.current?.classList.remove("show-items");
     };
-  });
+  }, []);
 
   //   Email send functionality
   const sendEmail = (e) => {

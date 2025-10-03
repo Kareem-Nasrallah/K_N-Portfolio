@@ -47,41 +47,47 @@ const Portfolio = () => {
           <PortfolioImage
             category="Next API Cart Authentication"
             projectName="Next Amazon"
-            proDescribing="E-commerce site similar to Amazon"
+            proDescribing="E-commerce site similar to Amazon."
+            technologies="Next, TypeScript, Redux Toolkit, Tailwind"
             githupLink="https://github.com/Kareem-Nasrallah/next-amazon"
             vercelHosting="https://next-amazon-lake.vercel.app"
           />
           <PortfolioImage
+            category="React API Authentication"
+            projectName="Task Flow"
+            proDescribing="A site for creating to-do lists and tracking all the tasks for each list."
+            technologies="React, TypeScript, Redux Toolkit, Axios, Tailwind, Daisyui, Formik, Yup, Bcryptjs"
+            vercelHosting="https://to-do-list-gamma-liard-48.vercel.app"
+            githupLink="https://github.com/Kareem-Nasrallah/to-do_list"
+          />
+          <PortfolioImage
+            category="React Cart"
+            projectName="Flavoro Foods"
+            proDescribing="Food shopping site."
+            technologies="React, TypeScript, Redux Toolkit, Tailwind"
+            vercelHosting="https://flavoro-foods.vercel.app"
+            githupLink="https://github.com/Kareem-Nasrallah/flavoro-foods"
+          />
+          <PortfolioImage
             category="React API"
             projectName="E-Books"
-            proDescribing="Free site to read e-books and enter the readers' community"
+            proDescribing="Free site to read e-books and enter the readers' community."
+            technologies="React, JavaScript, Axios, Swiper, Bootstrap"
             vercelHosting="https://e-books-tawny.vercel.app"
           />
           <PortfolioImage
             category="React API Authentication"
             projectName="NatureNest Realty"
             proDescribing="A platform for buying, selling, and exploring real estate listings."
+            technologies="React, JavaScript, Axios, Swiper, Bootstrap"
             githupLink="https://github.com/Kareem-Nasrallah/naturenest_realty_frontend"
-          />
-          <PortfolioImage
-            category="React Cart"
-            projectName="Flavoro Foods"
-            proDescribing="Food shopping site"
-            vercelHosting="https://flavoro-foods.vercel.app"
-            githupLink="https://github.com/Kareem-Nasrallah/flavoro-foods"
           />
           <PortfolioImage
             category="React API"
             projectName="Rnscinemas"
             proDescribing="A site showcasing current and upcoming movies in cinemas, along with cinema locations."
+            technologies="React, TypeScript, Swiper, Axios, Tailwind"
             vercelHosting="https://rnscinemas.vercel.app/"
-          />
-          <PortfolioImage
-            category="Cart"
-            projectName="New Horizons"
-            proDescribing="A site for booking adventure trips, games, and buying adventure gear."
-            vercelHosting="https://new-horizons-sandy.vercel.app"
-            githupLink="https://github.com/Kareem-Nasrallah/New-Horizons"
           />
         </div>
       </div>

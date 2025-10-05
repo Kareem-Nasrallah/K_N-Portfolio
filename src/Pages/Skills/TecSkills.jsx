@@ -6,7 +6,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiBootstrap,
-  SiPyup,
+  SiShadcnui,
   SiGit,
   SiHtml5,
   SiGithub,
@@ -80,6 +80,11 @@ const TecSkills = () => {
       icon: <SiTailwindcss className="iconComponent tailwind" />,
       name: "Tailwindcss",
       parintClass: "tailwind",
+    },
+    {
+      icon: <SiShadcnui className="iconComponent shadcn" />,
+      name: "Shadcn/ui",
+      parintClass: "shadcn",
     },
     {
       icon: <SiHtml5 className="iconComponent html" />,

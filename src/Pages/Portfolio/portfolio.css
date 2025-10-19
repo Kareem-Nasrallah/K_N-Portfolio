@@ -16,12 +16,13 @@
   letter-spacing: 0.4px;
   color: var(--text-color);
 }
+/* hover */
 .filter-buttons > button:hover {
   color: var(--hover-color);
 }
 .portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  grid-template-columns: repeat(3, minmax(420px, 1fr));
   gap: 2rem;
 }
 .port-box {
@@ -56,7 +57,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), var(--text-color));
+  background: var(--prtfolio-hover-color);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
@@ -102,12 +103,18 @@
   color: var(--text-color);
 }
 
+@media (1153px < width < 1670px) {
+  .portfolio-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  }
+}
+
 @media (780px < width < 1153px) {
   #portfolio {
     padding-top: 7%;
   }
   .portfolio-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   }
 }
 

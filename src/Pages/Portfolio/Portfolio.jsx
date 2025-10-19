@@ -34,26 +34,26 @@ const Portfolio = () => {
           <span>Latest Projects</span>
         </h2>
       </div>
-      <div className="container">
+      <div className="container max-w-none">
         <div className="filter-buttons">
           <button data-filter="all">All</button>
           <button data-filter=".Next">Next App</button>
           <button data-filter=".React">React App</button>
           <button data-filter=".API">API Fetch</button>
-          <button data-filter=".Cart">Cart</button>
+          <button data-filter=".CRUD">CRUD</button>
           <button data-filter=".Authentication">Authentication</button>
         </div>
         <div ref={galleryRef} className="portfolio-gallery scrollScale">
           <PortfolioImage
-            category="Next API Cart Authentication"
-            projectName="Next Amazon"
-            proDescribing="E-commerce site similar to Amazon."
-            technologies="Next, TypeScript, Redux Toolkit, Tailwind"
-            githupLink="https://github.com/Kareem-Nasrallah/next-amazon"
-            vercelHosting="https://next-amazon-lake.vercel.app"
+            category="React Authentication CRUD"
+            projectName="Biscuit Factory System"
+            proDescribing="Complete Factory Management System for managing production lines, inventory, staff, and quality reports."
+            technologies="React, TypeScript, Redux Toolkit, Formik, Yup, Tailwind, i18next, shadcn/ui (Radix UI)"
+            vercelHosting="https://biscuit-factory-system.vercel.app/"
+            githupLink="https://github.com/Kareem-Nasrallah/biscuit-factory-system"
           />
           <PortfolioImage
-            category="React API Authentication"
+            category="React API CRUD Authentication"
             projectName="Task Flow"
             proDescribing="A site for creating to-do lists and tracking all the tasks for each list."
             technologies="React, TypeScript, Redux Toolkit, Axios, Tailwind, Daisyui, Formik, Yup, Bcryptjs"
@@ -61,19 +61,20 @@ const Portfolio = () => {
             githupLink="https://github.com/Kareem-Nasrallah/to-do_list"
           />
           <PortfolioImage
-            category="React Cart"
+            category="Next API CRUD Authentication"
+            projectName="Next Amazon"
+            proDescribing="E-commerce site similar to Amazon."
+            technologies="Next, TypeScript, Redux Toolkit, Tailwind"
+            githupLink="https://github.com/Kareem-Nasrallah/next-amazon"
+            vercelHosting="https://next-amazon-lake.vercel.app"
+          />
+          <PortfolioImage
+            category="React CRUD"
             projectName="Flavoro Foods"
             proDescribing="Food shopping site."
             technologies="React, TypeScript, Redux Toolkit, Tailwind"
             vercelHosting="https://flavoro-foods.vercel.app"
             githupLink="https://github.com/Kareem-Nasrallah/flavoro-foods"
-          />
-          <PortfolioImage
-            category="React API"
-            projectName="E-Books"
-            proDescribing="Free site to read e-books and enter the readers' community."
-            technologies="React, JavaScript, Axios, Swiper, Bootstrap"
-            vercelHosting="https://e-books-tawny.vercel.app"
           />
           <PortfolioImage
             category="React API Authentication"

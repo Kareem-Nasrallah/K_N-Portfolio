@@ -16,6 +16,7 @@ import {
   SiSass,
   SiRedux,
 } from "react-icons/si";
+import { BsShieldShaded } from "react-icons/bs";
 
 const TecSkills = () => {
   const tecSkillsRef = useRef(null);
@@ -55,6 +56,11 @@ const TecSkills = () => {
       icon: <SiRedux className="iconComponent redux-toolkit" />,
       name: "Redux Toolkit",
       parintClass: "redux-toolkit",
+    },
+    {
+      icon: <BsShieldShaded  className="iconComponent next-auth" />,
+      name: "Next Auth",
+      parintClass: "next-auth",
     },
     {
       icon: <SiFormik className="iconComponent formik" />,

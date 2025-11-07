@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import ProfSkill from "../../Components/ProfSkill";
 import TecSkills from "./TecSkills";
-import "./skills.css"
+import "./skills.css";
 
 const Skills = () => {
   const profSkillsRef = useRef(null);
@@ -32,10 +32,12 @@ const Skills = () => {
         <div className="skill-right">
           <h3>Profeessional Skills</h3>
           <div ref={profSkillsRef} className="professional scrollScale">
-            <ProfSkill percentage="90" name="Team Work" />
-            <ProfSkill percentage="85" name="Communication" />
+            <ProfSkill percentage="80" name="Backend Collaboration" />
+            <ProfSkill percentage="85" name="Problem Solving" />
             <ProfSkill percentage="75" name="Creativity" />
-            <ProfSkill percentage="80" name="Problem Solving" />
+            <ProfSkill percentage="90" name="Team Work" />
+            <ProfSkill percentage="95" name="Communication" />
+            <ProfSkill percentage="90" name="Work Under Pressure" />
           </div>
         </div>
       </div>

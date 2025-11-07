@@ -45,10 +45,18 @@ const Portfolio = () => {
         </div>
         <div ref={galleryRef} className="portfolio-gallery scrollScale">
           <PortfolioImage
+            category="Next API Authentication"
+            projectName="KN Directory"
+            proDescribing="A web app for publishing and discovering startups with GitHub login and search functionality."
+            technologies="Next, TypeScript, Next Auth, Sanity, Zod, Tailwind, shadcn/ui"
+            vercelHosting="https://kn-directory.vercel.app/"
+            githupLink="https://github.com/Kareem-Nasrallah/kn_directory"
+          />
+          <PortfolioImage
             category="React Authentication CRUD"
             projectName="Biscuit Factory System"
             proDescribing="Complete Factory Management System for managing production lines, inventory, staff, and quality reports."
-            technologies="React, TypeScript, Redux Toolkit, Formik, Yup, Tailwind, i18next, shadcn/ui (Radix UI)"
+            technologies="React, TypeScript, Redux Toolkit, Formik, Yup, Tailwind, i18next, shadcn/ui"
             vercelHosting="https://biscuit-factory-system.vercel.app/"
             githupLink="https://github.com/Kareem-Nasrallah/biscuit-factory-system"
           />
@@ -64,7 +72,7 @@ const Portfolio = () => {
             category="Next API CRUD Authentication"
             projectName="Next Amazon"
             proDescribing="E-commerce site similar to Amazon."
-            technologies="Next, TypeScript, Redux Toolkit, Tailwind"
+            technologies="Next, TypeScript, Next Auth, Redux Toolkit, Tailwind"
             githupLink="https://github.com/Kareem-Nasrallah/next-amazon"
             vercelHosting="https://next-amazon-lake.vercel.app"
           />
@@ -82,13 +90,6 @@ const Portfolio = () => {
             proDescribing="A platform for buying, selling, and exploring real estate listings."
             technologies="React, JavaScript, Axios, Swiper, Bootstrap"
             githupLink="https://github.com/Kareem-Nasrallah/naturenest_realty_frontend"
-          />
-          <PortfolioImage
-            category="React API"
-            projectName="Rnscinemas"
-            proDescribing="A site showcasing current and upcoming movies in cinemas, along with cinema locations."
-            technologies="React, TypeScript, Swiper, Axios, Tailwind"
-            vercelHosting="https://rnscinemas.vercel.app/"
           />
         </div>
       </div>

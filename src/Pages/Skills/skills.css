@@ -25,7 +25,6 @@
 #tec-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-  flex-wrap: wrap;
 }
 .skill-box {
   text-align: center;
@@ -41,6 +40,9 @@
 .redux-toolkit,
 .formik {
   padding: 0.2rem;
+}
+.next-auth path {
+  color: #02abc2;
 }
 .css path {
   color: #224bff;
@@ -101,7 +103,7 @@
 .after::after {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   top: 2px;
   left: 2px;
   background: #fff;
@@ -110,9 +112,24 @@
   height: 95%;
   border-radius: 25%;
 }
+.after-next-auth {
+  position: relative;
+}
+.after-next-auth::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 13%;
+  left: 45%;
+  transition: 0.4s;
+  width: 38%;
+  height: 72%;
+  border-top-right-radius: 80% 20%;
+  border-bottom-right-radius: 80% 75%;
+  border-bottom-left-radius: 20%;
+  background: #8200be;
+}
 .after-shadcn::after,
-.after-
-.shadcn,formik::after,
 .after-tailwind::after,
 .after-redux-toolkit::after,
 .after-react::after {
@@ -136,17 +153,27 @@
 .after-github::after,
 .after-scss::after {
   top: 11%;
-  left: 8px;
+  left: 10%;
   border-radius: 50%;
   width: 79%;
   height: 78%;
 }
-.dark .after-github::after,
-.dark .after-next::after {
+.after-github::after,
+.after-scss::after {
+  left: 12%;
+  width: 77%;
+}
+.dark .after-github::after {
   top: 8%;
   left: 8%;
-  width: 84%;
-  height: 85%;
+  width: 85%;
+  height: 86%;
+}
+.dark .after-next::after {
+  top: 7%;
+  left: 7%;
+  width: 86%;
+  height: 86%;
 }
 .after-html::after,
 .after-css::after {
@@ -180,7 +207,8 @@
 /* ///////////////  right skills   ////////////////////// */
 .professional {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  padding-inline: 10px;
 }
 .box {
   margin: 1.6rem 0 2.5rem;
@@ -248,4 +276,7 @@ small {
     gap: 7.5rem;
     margin-top: 2rem;
   }
+.professional {
+  padding-inline: 25px;
+}
 }

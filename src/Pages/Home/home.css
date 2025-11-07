@@ -19,7 +19,7 @@
 }
 .home-content p {
   line-height: 1.6rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .text-animate {
   width: fit-content;
@@ -46,7 +46,7 @@
   0%,
   10%,
   100% {
-    background-position: -29rem 0;
+    background-position: -27rem 0;
   }
   65%,
   85% {
@@ -231,7 +231,7 @@
     0%,
     10%,
     100% {
-      background-position: -26rem 0;
+      background-position: -24rem 0;
     }
     65%,
     85% {
@@ -261,7 +261,7 @@
     0%,
     10%,
     100% {
-      background-position: -22.8rem 0;
+      background-position: -21rem 0;
     }
     65%,
     85% {
@@ -300,7 +300,21 @@
     0%,
     10%,
     100% {
-      background-position: -22.8rem 0;
+      background-position: -21rem 0;
+    }
+    65%,
+    85% {
+      background-position: 0rem 0;
+    }
+  }
+}
+
+@media (max-width: 545px) {
+  @keyframes moveText {
+    0%,
+    10%,
+    100% {
+      background-position: -21.5rem 0;
     }
     65%,
     85% {
@@ -314,7 +328,7 @@
     0%,
     10%,
     100% {
-      background-position: -21rem 0;
+      background-position: -20rem 0;
     }
     65%,
     85% {

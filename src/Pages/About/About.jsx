@@ -13,6 +13,16 @@ const About = () => {
     };
   }, []);
 
+  const MBTecniqalUsed = [
+    "React",
+    "Typescript",
+    "Redux Toolkit",
+    "Formik",
+    "Yup",
+    "Tailwindcss",
+    "Shadcn/ui",
+    "Git & GitLap",
+  ];
   return (
     <section id="about">
       <div ref={aboutContRef} className="about-content fromright">
@@ -63,11 +73,29 @@ const About = () => {
               continuous practice until I mastered it.
             </li>
             <li>
-              Full-time developer until now, collaborating closely with both
-              the testing and backend teams. Learned and applied new skills I
-              hadn’t worked with before, such as Formik and Yup.
+              Full-time developer until now, collaborating closely with both the
+              testing and backend teams. Learned and applied new skills I hadn’t
+              worked with before, such as Formik and Yup.
             </li>
           </ul>
+          <div className="mt-4">
+            <strong>Technologies used:</strong>
+            <br />
+            <ui>
+              {MBTecniqalUsed.map((tech, index) => (
+                <li
+                  className="list-none inline-block m-1 py-1 px-2 text-sm rounded-full"
+                  style={{
+                    background: "var(--hover-color)",
+                    color: "var(--secon-bg-color)",
+                  }}
+                  key={index}
+                >
+                  {tech}
+                </li>
+              ))}
+            </ui>
+          </div>
         </div>
       </div>
     </section>

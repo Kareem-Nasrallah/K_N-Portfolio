@@ -37,15 +37,21 @@ const Portfolio = () => {
       <div className="container max-w-none">
         <div className="filter-buttons">
           <button data-filter="all">All</button>
-          <button data-filter=".Next">Next App</button>
-          <button data-filter=".React">React App</button>
-          <button data-filter=".API">API Fetch</button>
-          <button data-filter=".CRUD">CRUD</button>
-          <button data-filter=".Authentication">Authentication</button>
+          <button data-filter=".Best">Best Work</button>
+          <button data-filter=".Next">Next Apps</button>
+          <button data-filter=".React">React Apps</button>
+          <button data-filter=".Mini">Mini Projects</button>
         </div>
         <div ref={galleryRef} className="portfolio-gallery scrollScale">
           <PortfolioImage
-            category="Next API Authentication"
+            category="React Best"
+            projectName="LUXE"
+            proDescribing="A complete e-commerce experience featuring product browsing, cart & wishlist, secure checkout, and multilingual responsive design."
+            technologies="React, TypeScript, Sanity, Swiper, Formik, Yup, Tailwind, shadcn/ui"
+            vercelHosting="https://luxe-two-pink.vercel.app/"
+          />
+          <PortfolioImage
+            category="Next Best"
             projectName="KN Directory"
             proDescribing="A web app for publishing and discovering startups with GitHub login and search functionality."
             technologies="Next, TypeScript, Next Auth, Sanity, Zod, Tailwind, shadcn/ui"
@@ -53,7 +59,7 @@ const Portfolio = () => {
             githupLink="https://github.com/Kareem-Nasrallah/kn_directory"
           />
           <PortfolioImage
-            category="React Authentication CRUD"
+            category="React Best"
             projectName="Biscuit Factory System"
             proDescribing="Complete Factory Management System for managing production lines, inventory, staff, and quality reports."
             technologies="React, TypeScript, Redux Toolkit, Formik, Yup, Tailwind, i18next, shadcn/ui"
@@ -61,7 +67,7 @@ const Portfolio = () => {
             githupLink="https://github.com/Kareem-Nasrallah/biscuit-factory-system"
           />
           <PortfolioImage
-            category="React API CRUD Authentication"
+            category="React Mini"
             projectName="Task Flow"
             proDescribing="A site for creating to-do lists and tracking all the tasks for each list."
             technologies="React, TypeScript, Redux Toolkit, Axios, Tailwind, Daisyui, Formik, Yup, Bcryptjs"
@@ -69,7 +75,7 @@ const Portfolio = () => {
             githupLink="https://github.com/Kareem-Nasrallah/to-do_list"
           />
           <PortfolioImage
-            category="Next API CRUD Authentication"
+            category="Next Mini"
             projectName="Next Amazon"
             proDescribing="E-commerce site similar to Amazon."
             technologies="Next, TypeScript, Next Auth, Redux Toolkit, Tailwind"
@@ -77,19 +83,12 @@ const Portfolio = () => {
             vercelHosting="https://next-amazon-lake.vercel.app"
           />
           <PortfolioImage
-            category="React CRUD"
+            category="React Mini"
             projectName="Flavoro Foods"
             proDescribing="Food shopping site."
             technologies="React, TypeScript, Redux Toolkit, Tailwind"
             vercelHosting="https://flavoro-foods.vercel.app"
             githupLink="https://github.com/Kareem-Nasrallah/flavoro-foods"
-          />
-          <PortfolioImage
-            category="React API Authentication"
-            projectName="NatureNest Realty"
-            proDescribing="A platform for buying, selling, and exploring real estate listings."
-            technologies="React, JavaScript, Axios, Swiper, Bootstrap"
-            githupLink="https://github.com/Kareem-Nasrallah/naturenest_realty_frontend"
           />
         </div>
       </div>

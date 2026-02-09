@@ -26,19 +26,9 @@ const PortfolioImage = (props) => {
             >
               <i className="bx bxl-github"></i>
             </a>
-            {props.gitHosting && (
-              <a
-                href={`https://kareem-nasrallah.github.io/${props.projectName}`}
-                target="_blank"
-              >
-                <i className="bx bx-link-external"></i>
-              </a>
-            )}
-            {props.vercelHosting && (
-              <a href={props.vercelHosting} target="_blank">
-                <i className="bx bx-link-external"></i>
-              </a>
-            )}
+            <a href={props.vercelHosting} target="_blank">
+              <i className="bx bx-link-external"></i>
+            </a>
           </div>
         </div>
       </div>

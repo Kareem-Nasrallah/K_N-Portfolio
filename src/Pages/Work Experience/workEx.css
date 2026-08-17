@@ -1,0 +1,52 @@
+#workEx {
+  background: var(--secon-bg-color);
+  margin-top: 0;
+  padding-top: 4%;
+}
+.experience h3{
+  font-weight: 600;
+  font-size: var(--h3-font);
+}
+.experience p{
+  color: var(--text-color);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.job-experience {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: start;
+}
+.job{
+  transition: all 0.5s;
+}
+
+@media (max-width: 1220px) {
+  .job-experience {
+    align-items: start;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 780px) {
+  #workEx {
+    margin-top: 3rem;
+  }
+  .job-experience {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .experience{
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #workEx {
+    padding: 16% 5%;
+  }
+}

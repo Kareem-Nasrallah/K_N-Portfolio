@@ -22,6 +22,11 @@ section {
   margin-top: 12px;
   min-height: calc(100vh - 123px);
 }
+h2.title{
+  font-weight: 700;
+  font-size: var(--big-font);
+  word-spacing: 0.5rem;
+}
 ::-webkit-scrollbar {
   height: 0;
   width: 0.5rem;

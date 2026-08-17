@@ -53,13 +53,16 @@ const Header = () => {
         <NavLink onClick={handleScroll} to="about" style={{ i: 2 }}>
           About
         </NavLink>
-        <NavLink onClick={handleScroll} to="skills" style={{ i: 3 }}>
-          Skills
+        <NavLink onClick={handleScroll} to="work-experience" style={{ i: 3 }}>
+          Work Experience
         </NavLink>
         <NavLink onClick={handleScroll} to="portfolio" style={{ i: 4 }}>
           portfolio
         </NavLink>
-        <NavLink onClick={handleScroll} to="contact" style={{ i: 5 }}>
+        <NavLink onClick={handleScroll} to="skills" style={{ i: 5 }}>
+          Skills
+        </NavLink>
+        <NavLink onClick={handleScroll} to="contact" style={{ i: 6 }}>
           Contact
         </NavLink>
         <label

@@ -1,16 +1,10 @@
 #about {
-  display: flex;
-  gap: 4rem;
-  justify-content: space-between;
-  align-items: start;
   background: var(--secon-bg-color);
   margin-top: 4rem;
 }
-.experience,
-.about-content {
-  width: 50%;
-  max-width: 37rem;
-}
+
+/* .about-content, */
+
 .about-content > span,
 .main-text > span {
   color: var(--text-simi-ten-color);
@@ -21,7 +15,6 @@
   display: inline-block;
   margin-bottom: 8px;
 }
-.experience h2,
 .contactData > h2,
 .about-content h2,
 .main-text h2 {
@@ -29,13 +22,11 @@
   font-size: var(--normal-font);
   word-spacing: 0.5rem;
 }
-.experience h3,
 .about-content h3 {
   font-weight: 600;
   font-size: var(--h3-font);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
-.experience p,
 .about-content p {
   color: var(--text-color);
   font-weight: 300;
@@ -46,21 +37,9 @@
   margin-top: 1.5rem;
 }
 
-/* the about image style in the index.css */
-
-@media (max-width: 1220px) {
-  #about {
-    align-items: start;
-    margin-top: 4rem;
-  }
-}
-
 @media (max-width: 780px) {
   #about {
     margin-top: 3rem;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
   }
   .experience,
   .about-content {

@@ -78,7 +78,7 @@ const Colors = () => {
           <i className="bx bxs-cog" />
         </div>
         <div className="wrapper">
-          <h3>chose your fv color</h3>
+          <h3>choose your fav color</h3>
           <div id="colorsDev">
             {allColors.map(
               ({ color, liteColor, mediumColor, heavyColor }, i) => (

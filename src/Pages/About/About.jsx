@@ -2,27 +2,14 @@ import { useEffect, useRef } from "react";
 import "./about.css";
 
 const About = () => {
-  const aboutImgRef = useRef(null);
   const aboutContRef = useRef(null);
   useEffect(() => {
-    aboutImgRef.current?.classList.add("show-items");
     aboutContRef.current?.classList.add("show-items");
     return () => {
-      aboutImgRef.current?.classList.remove("show-items");
       aboutContRef.current?.classList.remove("show-items");
     };
   }, []);
 
-  const MBTecniqalUsed = [
-    "React",
-    "Typescript",
-    "Redux Toolkit",
-    "Formik",
-    "Yup",
-    "Tailwindcss",
-    "Shadcn/ui",
-    "Git & GitLap",
-  ];
   return (
     <section id="about">
       <div ref={aboutContRef} className="about-content fromright">
@@ -30,7 +17,7 @@ const About = () => {
         <h2>
           <span>About Me</span>
         </h2>
-        <h3>A Story of Growth</h3>
+        <h3>My Growth Story</h3>
         <p>
           I graduated from the Faculty of Arts, History Department (Egyptology),
           but my search for a better future led me to discover programming. What
@@ -53,50 +40,6 @@ const About = () => {
           determination to keep growing, learning, and delivering high-quality
           work.
         </p>
-      </div>
-      <div ref={aboutImgRef} className="fromlift experience min-h-96 my-10">
-        <h2>
-          <span>Work Experience</span>
-        </h2>
-
-        <div className="job mb-4">
-          <h3 className="text-xl font-semibold">
-            Frontend Developer | MB ALFA Company
-          </h3>
-          <p className="mb-2">(April 2025 – Present)</p>
-
-          <ul className="list-disc list-inside space-y-2 flex flex-col gap-4">
-            <li>
-              3-month internship where I worked for the first time on
-              large-scale, real-world projects. Collaborated with the testing
-              team and strengthened my knowledge of Redux Toolkit through
-              continuous practice until I mastered it.
-            </li>
-            <li>
-              Full-time developer until now, collaborating closely with both the
-              testing and backend teams. Learned and applied new skills I hadn’t
-              worked with before, such as Formik and Yup.
-            </li>
-          </ul>
-          <div className="mt-4">
-            <strong>Technologies used:</strong>
-            <br />
-            <ui>
-              {MBTecniqalUsed.map((tech, index) => (
-                <li
-                  className="list-none inline-block m-1 py-1 px-2 text-sm rounded-full"
-                  style={{
-                    background: "var(--hover-color)",
-                    color: "var(--secon-bg-color)",
-                  }}
-                  key={index}
-                >
-                  {tech}
-                </li>
-              ))}
-            </ui>
-          </div>
-        </div>
       </div>
     </section>
   );

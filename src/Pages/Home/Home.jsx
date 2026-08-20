@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home">
+    <section id="home" className="bg-(--home-bg-color)">
       <div ref={homeContRef} className="home-content fromlift">
         <h3>Hi! Im</h3>
         <h1>Kareem Nasrallah</h1>

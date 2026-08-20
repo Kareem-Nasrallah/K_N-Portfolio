@@ -20,7 +20,7 @@ const WorkExperience = () => {
 
   return (
     <>
-      <Hero title={"Work Experience"} bgImage={'./headers/workEx2.png'}/>
+      <Hero title={"Work Experience"} bgImage={'./headers/workExperience.png'}/>
       <section id="workEx">
         <div className="experience">
           <div className="job-experience">

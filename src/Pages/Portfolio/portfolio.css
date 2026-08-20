@@ -1,5 +1,6 @@
 #portfolio {
   background: var(--secon-bg-color);
+  margin-top: 0;
 }
 .filter-buttons {
   text-align: center;

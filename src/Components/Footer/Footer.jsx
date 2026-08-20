@@ -3,7 +3,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-(--header-bg-color)">
       <p>
         copyright © 2024 by{" "}
         <span>

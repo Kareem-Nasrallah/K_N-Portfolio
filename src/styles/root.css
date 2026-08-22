@@ -26,6 +26,7 @@
   --normal-font: 2rem;
   --animationText-font: 2.5rem;
   --h3-font: 1.5rem;
+  --h4-font: 1.1rem;
   --hover-box-shadow:
     rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
   --neon-box-shadow: 0 0 10px #025ac9;
@@ -219,6 +220,7 @@
     --big-font: 2.7rem;
     --normal-font: 1.7rem;
     --h3-font: 1.2rem;
+    --h4-font: 1rem;
     --animationText-font: 1.9rem;
   }
 }

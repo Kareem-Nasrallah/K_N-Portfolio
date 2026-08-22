@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./about.css";
 import Hero from "../../Components/Hero";
+import Card from "../../Components/Card";
 
 const About = () => {
   const careerShiftRef = useRef(null);
@@ -236,6 +237,11 @@ const About = () => {
             Learned. Learning. Always evolving. Because the moment I stop
             growing, I stop moving forward.
           </p>
+          <div className="flex justify-between items-center gap-5">
+            <Card key={"B.A. in Egyptology"} imgSrc={"./about/egyptology.png"} title={"B.A. in Egyptology"} subtitle={"Alexandria University — Faculty of Arts"} description={"Studied Egyptian history, archaeology, culture, and ancient civilizations, with a focus on Egyptology and the interpretation of archaeological and historical evidence."} />
+            <Card key={"The Ultimate React Course"} imgSrc={"./about/Jonas-course.png"} title={"The Ultimate React Course"} subtitle={"Jonas Schmedtmann — Udemy"} description={"Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications."} />
+            <Card key={"Diploma in Computer Science"} imgSrc={"./about/cs-Diploma.png"} title={"Diploma in Computer Science"} subtitle={"Cairo University — Faculty of Graduate Studies for Statistical Research"} description={"Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications."} />
+          </div>
         </section>
       </main>
     </>

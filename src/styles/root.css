@@ -13,6 +13,8 @@
   --secon-bg-color: #e0edff;
   /* --secon-bg-color: #cce0ff; */
   --mail-bg-color: #003;
+  --card-bg: #02e1ff12;
+  --card-hover-bg: #02e1ff32;
   --input-color: #02e1ffc4;
   --input-plholder-color: #02e1ff5b;
   --points-color: #012661;
@@ -58,6 +60,8 @@
   --secon-bg-color: #e8ffe7;
   --mail-bg-color: #020;
   --neon-social: 0 0 5px #02c95a;
+  --card-bg: #17ff0212;
+  --card-hover-bg: #17ff0232;
   --input-color: #17ff02;
   --input-plholder-color: #3dff025b;
   --points-color: #013116;
@@ -93,6 +97,8 @@
   --header-bg-color: #beafe0b6;
   --mail-bg-color: #180035;
   --neon-social: 0 0 5px #5a02c9;
+  --card-bg: #8400ff12;
+  --card-hover-bg: #8400ff32;
   --input-color: #8400ff;
   --input-plholder-color: #7c1eef6b;
   --points-color: #210741;
@@ -127,6 +133,8 @@
   --menu-bg-color: #ffdaa2c8;
   --secon-bg-color: #ffefd6;
   --mail-bg-color: #301c00;
+  --card-bg: #ffbe0012;
+  --card-hover-bg: #ffbe0032;
   --input-color: #ffbe00;
   --input-plholder-color: #ffa6006b;
   --points-color: #4d2f06;

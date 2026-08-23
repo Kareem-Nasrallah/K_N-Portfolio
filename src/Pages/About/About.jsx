@@ -9,6 +9,31 @@ const About = () => {
   const growthContRef = useRef(null);
   const [selectedChapter, setSelectedChapter] = useState(1);
 
+  const myEducation = [
+    {
+      title: "B.A. in Egyptology",
+      subtitle: "Alexandria University — Faculty of Arts",
+      description:
+        "Studied Egyptian history, archaeology, culture, and ancient civilizations, with a focus on Egyptology and the interpretation of archaeological and historical evidence.",
+      imgSrc: "./about/egyptology.png",
+    },
+    {
+      title: "The Ultimate React Course",
+      subtitle: "Jonas Schmedtmann — Udemy",
+      description:
+        "Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications.",
+      imgSrc: "./about/Jonas-course.png",
+    },
+    {
+      title: "Diploma in Computer Science",
+      subtitle:
+        "Cairo University — Faculty of Graduate Studies for Statistical Research",
+      description:
+        "Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications.",
+      imgSrc: "./about/cs-Diploma.png",
+    },
+  ];
+
   useEffect(() => {
     careerShiftRef.current?.classList.add("show-items");
     ownershipContRef.current?.classList.add("show-items");
@@ -55,12 +80,12 @@ const About = () => {
               {/* ==================== chapter 01 ==================== */}
               <div
                 className={
-                  "h-full flex relative overflow-hidden pe-[140px] transition-all duration-500 bg-yellow-300 " +
+                  "h-full flex relative overflow-hidden pe-[140px] transition-all duration-500 bg-yellow-400 " +
                   (!(selectedChapter === 1) && "cursor-pointer")
                 }
                 onClick={() => setSelectedChapter(1)}
               >
-                <div className="md:w-8 w-4 md:ps-6 ps-2 pe-10 py-6 bg-[url('./about/myStory1.png')] bg-no-repeat bg-[30%] bg-cover before:absolute before:inset-0 before:bg-yellow-300/80">
+                <div className="md:w-8 w-4 md:ps-6 ps-2 pe-10 py-6 bg-[url('./about/myStory1.png')] bg-no-repeat bg-[30%] bg-cover before:absolute before:inset-0 before:bg-yellow-400/80">
                   <h4 className="[writing-mode:vertical-rl] ps-2 font-bold z-10 relative">
                     01 — The Beginning
                   </h4>
@@ -108,14 +133,14 @@ const About = () => {
               {/* ==================== chapter 02 ==================== */}
               <div
                 className={
-                  `bg-[#01e1ff] h-full w-full flex z-20 pe-[144px] transition-all duration-500 overflow-hidden absolute inset-0 ${!(selectedChapter === 2) ? "cursor-pointer " : ""}` +
+                  `bg-[#00cbe6] h-full w-full flex z-20 pe-[144px] transition-all duration-500 overflow-hidden absolute inset-0 ${!(selectedChapter === 2) ? "cursor-pointer " : ""}` +
                   (selectedChapter === 1
                     ? "left-[100%] -translate-x-[128px] cursor-pointer"
                     : "md:left-[64px] sm:left-[50px] left-[46px] translate-x-0")
                 }
                 onClick={() => setSelectedChapter(2)}
               >
-                <div className="md:w-8 w-4 md:ps-6 ps-2 pe-10 py-6 bg-[url('./about/myStory2.png')] bg-no-repeat bg-left bg-cover before:absolute before:inset-0 before:bg-[#01e1ff]/80">
+                <div className="md:w-8 w-4 md:ps-6 ps-2 pe-10 py-6 bg-[url('./about/myStory2.png')] bg-no-repeat bg-left bg-cover before:absolute before:inset-0 before:bg-[#00cbe6]/80">
                   <h4 className="[writing-mode:vertical-rl] ps-2 font-bold z-10 relative">
                     02 — Taking Ownership
                   </h4>
@@ -232,15 +257,17 @@ const About = () => {
           </div>
         </section>
         <section className="about-content">
-          <h2 className="text-center"><span>Education & Learning</span></h2>
+          <h2 className="text-center">
+            <span>Education & Learning</span>
+          </h2>
           <p className="text-center">
             Learned. Learning. Always evolving. Because the moment I stop
             growing, I stop moving forward.
           </p>
-          <div className="flex justify-between items-center gap-5">
-            <Card key={"B.A. in Egyptology"} imgSrc={"./about/egyptology.png"} title={"B.A. in Egyptology"} subtitle={"Alexandria University — Faculty of Arts"} description={"Studied Egyptian history, archaeology, culture, and ancient civilizations, with a focus on Egyptology and the interpretation of archaeological and historical evidence."} />
-            <Card key={"The Ultimate React Course"} imgSrc={"./about/Jonas-course.png"} title={"The Ultimate React Course"} subtitle={"Jonas Schmedtmann — Udemy"} description={"Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications."} />
-            <Card key={"Diploma in Computer Science"} imgSrc={"./about/cs-Diploma.png"} title={"Diploma in Computer Science"} subtitle={"Cairo University — Faculty of Graduate Studies for Statistical Research"} description={"Advanced training in modern React development, covering React fundamentals, hooks, state management, Next.js, Redux, and building scalable, production-ready applications."} />
+          <div className="flex justify-between items-stretch gap-5 mt-6">
+            {myEducation.map((education) => (
+              <Card key={education.title} education={education} />
+            ))}
           </div>
         </section>
       </main>

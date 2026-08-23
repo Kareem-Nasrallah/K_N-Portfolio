@@ -11,7 +11,7 @@ const IcomGroup = ({ idClicked, setIdClicked }) => {
 
   return (
     <div
-      className={`job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:bg-gray-300/50 
+      className={`job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:bg-gray-300/50 flex-1 
     ${typeof idClicked === "string" && idClicked.includes("icom") ? "border-(--hover-color) bg-gray-300/50" : "border-blue-900 bg-gray-300"}`}
     >
       <div className="flex gap-4 items-start">

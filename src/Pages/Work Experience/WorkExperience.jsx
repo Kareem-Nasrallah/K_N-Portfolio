@@ -23,12 +23,12 @@ const WorkExperience = () => {
       <Hero title={"Work Experience"} bgImage={'./headers/workExperience.png'}/>
       <section id="workEx">
         <div className="experience">
-          <div className="job-experience">
+          <div className="job-experience items-stretch">
             {/* MB ALFA */}
-            <div ref={mbalfa} className="fromlift">
+            <div ref={mbalfa} className="fromlift flex flex-col flex-1">
               <Mbalfa idClicked={idClicked} setIdClicked={setIdClicked} />
             </div>
-            <div ref={icom} className="fromright">
+            <div ref={icom} className="fromright flex flex-col flex-1">
               <IcomGroup idClicked={idClicked} setIdClicked={setIdClicked} />
             </div>
 

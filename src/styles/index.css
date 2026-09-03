@@ -18,9 +18,11 @@ body {
   overflow-x: hidden;
 }
 section {
-  padding: 5% 10% 4%;
-  margin-top: 12px;
-  min-height: calc(100vh - 123px);
+  padding: 80px 15px 80px;
+}
+section > div{
+  margin: 0 auto;
+  max-width: 1300px;
 }
 h2.title{
   font-weight: 700;
@@ -98,7 +100,7 @@ h4 {
     scale: 0.95;
   }
   section {
-    padding: 50px 5%;
+    padding: 60px 30px;
   }
 }
 
@@ -113,7 +115,7 @@ h4 {
     overflow: hidden;
   }
   section {
-    padding: 70px 5%;
+    padding: 60px 15px;
   }
   html,
   body {

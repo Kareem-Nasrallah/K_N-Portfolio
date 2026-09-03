@@ -37,6 +37,16 @@ h4 {
   font-size: var(--h4-font);
   margin-bottom: 0.15rem;
 }
+h2.sectionTitle {
+  text-align: center;
+  color: var(--text-simi-ten-color);
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: var(--normal-font);
+  word-spacing: 0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
 ::-webkit-scrollbar {
   height: 0;
   width: 0.5rem;

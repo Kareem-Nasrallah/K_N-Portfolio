@@ -134,12 +134,12 @@
   border-bottom-left-radius: 20%;
   background: #8200be;
 }
-.after-formik::after{
+.after-formik::after {
   top: 7%;
   left: 7%;
   width: 86%;
   height: 86%;
-} 
+}
 .after-shadcn::after,
 .after-tailwind::after,
 .after-redux-toolkit::after,
@@ -296,12 +296,14 @@ small {
 
 /*  */
 .iconsGroup {
-  transition: all 2s;
+  transition:
+    opacity 1s,
+    rotate 2s;
   position: absolute;
   border: 1px solid #ffffff30;
 }
-.iconsGroupAnimation{
-    animation: orbit 20s linear infinite;
+.iconsGroupAnimation {
+  animation: orbit 20s linear infinite;
 }
 .movingParent:hover .iconsGroup {
   animation-play-state: paused;
@@ -314,7 +316,7 @@ small {
   animation-play-state: paused;
 }
 
-.skill-box{
+.skill-box {
   transition: all 2s;
 }
 

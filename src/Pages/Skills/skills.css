@@ -27,7 +27,6 @@
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 }
 .skill-box {
-  text-align: center;
   margin: 1rem;
   transition: 0.4s;
 }
@@ -82,6 +81,12 @@
 .scss path {
   color: rgb(230, 97, 119);
 }
+.elementor path {
+  color: #7c0559;
+}
+.wordpress path {
+  color: #217296;
+}
 .skill-box:hover {
   scale: 1.1;
 }
@@ -129,14 +134,20 @@
   border-bottom-left-radius: 20%;
   background: #8200be;
 }
+.after-formik::after{
+  top: 7%;
+  left: 7%;
+  width: 86%;
+  height: 86%;
+} 
 .after-shadcn::after,
 .after-tailwind::after,
 .after-redux-toolkit::after,
 .after-react::after {
   top: 6%;
   left: 5%;
-  width: 90%;
-  height: 86%;
+  width: 88%;
+  height: 84%;
 }
 .after-javascript::after,
 .after-typescript::after {
@@ -149,6 +160,8 @@
 .after-javascript::after {
   background: #000;
 }
+.after-wordpress::after,
+.after-elementor::after,
 .after-next::after,
 .after-github::after,
 .after-scss::after {
@@ -276,7 +289,50 @@ small {
     gap: 7.5rem;
     margin-top: 2rem;
   }
-.professional {
-  padding-inline: 25px;
+  .professional {
+    padding-inline: 25px;
+  }
 }
+
+/*  */
+.iconsGroup {
+  transition: all 2s;
+  position: absolute;
+  border: 1px solid #ffffff30;
+}
+.iconsGroupAnimation{
+    animation: orbit 20s linear infinite;
+}
+.movingParent:hover .iconsGroup {
+  animation-play-state: paused;
+}
+.spin {
+  animation: orbit-reverse 20s linear infinite;
+  animation-play-state: running;
+}
+.movingParent:hover .spin {
+  animation-play-state: paused;
+}
+
+.skill-box{
+  transition: all 2s;
+}
+
+@keyframes orbit {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes orbit-reverse {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: -360deg;
+  }
 }

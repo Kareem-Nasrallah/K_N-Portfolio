@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <>
       <Hero title={"Technical Skills"} bgImage={"./headers/skills.png"} />
-      <section id="skills" className="!pb-0 !h-auto">
+      <section id="skills" className="!pb-0 !h-auto  overflow-hidden ">
         <div className="main-text">
           <span> technical and profeessional </span>
           <h2>
@@ -30,31 +30,31 @@ const Skills = () => {
         </div>
         <div className="flex justify-center items-center gap-4">
           <button
-            className="cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:color-[var(--hover-color)]"
+            className={`cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:!text-[var(--hover-color)] ${spiner === "all" && "!text-[var(--hover-color)]"}`}
             onClick={() => setSpinner("all")}
           >
             All
           </button>
           <button
-            className="cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:color-[var(--hover-color)]"
+            className={`cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:!text-[var(--hover-color)] ${spiner === "core development" && "!text-[var(--hover-color)]"}`}
             onClick={() => setSpinner("core development")}
           >
             Core Development
           </button>
           <button
-            className="cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:color-[var(--hover-color)]"
+            className={`cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:!text-[var(--hover-color)] ${spiner === "ui & styling" && "!text-[var(--hover-color)]"}`}
             onClick={() => setSpinner("ui & styling")}
           >
             UI & Styling
           </button>
           <button
-            className="cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:color-[var(--hover-color)]"
+            className={`cursor-pointer p-2 font-semibold text-[0.85rem] tracking-[0.4px] hover:!text-[var(--hover-color)] ${spiner === "application toolshy" && "!text-[var(--hover-color)]"}`}
             onClick={() => setSpinner("application tools")}
           >
             Application Tools
           </button>
         </div>
-        <div className="h-[540px] w-[60vw] overflow-hidden z-10 relative  flex justify-center items-center">
+        <div className="h-[540px] w-[60vw]z-10 relative  flex justify-center items-center ">
           <Skill />
           <div
             className="movingParent w-[780px] h-[780px] border-2 border-[#00000030] rounded-full absolute top-0 left-[50%] -translate-x-[50%]  flex justify-center items-center"

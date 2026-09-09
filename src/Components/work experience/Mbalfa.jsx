@@ -9,7 +9,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
     "Yup",
     "Tailwindcss",
     "Shadcn/ui",
-    "Git & GitLap",
+    "Git & GitLab",
   ];
 
   return (

@@ -183,7 +183,7 @@ const initialState = {
     },
     {
       id: "gitLab",
-      icon: <SiGitlab className="iconComponent gitlap" />,
+      icon: <SiGitlab className="iconComponent gitlab" />,
       name: "GitLab",
       description:
         "Supports repository management, team collaboration, version control, and streamlined development workflows throughout the software development process.",

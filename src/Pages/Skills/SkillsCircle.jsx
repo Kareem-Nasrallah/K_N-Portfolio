@@ -17,15 +17,13 @@ const SkillsCircle = ({ spiner, justSpine }) => {
 
   const dispatch = useDispatch();
   const skills = useSelector((state) => state.skills.skills);
-  const selectedSkill = useSelector((state) => state.skills.selectedSkill);
-  console.log(selectedSkill);
 
   return (
     <>
       <div className="h-[600PX] w-[600PX] border-2 border-[#00000030] rounded-full"></div>
       {skills.coreDevelopment.map((skillInfo) => (
         <div
-          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} `}
+          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} cursor-pointer `}
           style={{
             rotate:
               spiner === "core development"
@@ -37,7 +35,6 @@ const SkillsCircle = ({ spiner, justSpine }) => {
           key={skillInfo.name}
           onClick={() => {
             dispatch(selectSkill(skillInfo));
-            console.log(selectedSkill);
           }}
         >
           <span className={`after after-${skillInfo.parintClass}`}>
@@ -48,7 +45,7 @@ const SkillsCircle = ({ spiner, justSpine }) => {
 
       {skills.uiStyling.map((skillInfo) => (
         <div
-          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} `}
+          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} cursor-pointer `}
           style={{
             rotate:
               spiner === "core development"
@@ -60,7 +57,6 @@ const SkillsCircle = ({ spiner, justSpine }) => {
           key={skillInfo.name}
           onClick={() => {
             dispatch(selectSkill(skillInfo));
-            console.log(selectedSkill);
           }}
         >
           <span className={`after after-${skillInfo.parintClass}`}>
@@ -71,7 +67,7 @@ const SkillsCircle = ({ spiner, justSpine }) => {
 
       {skills.applicationTools.map((skillInfo) => (
         <div
-          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} `}
+          className={`skill-box absolute ${skillInfo.position} ${justSpine === true && "spin"} cursor-pointer `}
           style={{
             rotate:
               spiner === "core development"

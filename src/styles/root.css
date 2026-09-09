@@ -38,6 +38,11 @@
     0 0 30px rgba(2, 90, 201, 0.3), 0 0 40px rgba(2, 90, 201, 0.3),
     0 0 70px rgba(2, 90, 201, 0.3), 0 0 80px rgba(2, 90, 201, 0.3),
     0 0 100px rgba(2, 90, 201, 0.3), 0 0 150px rgba(2, 90, 201, 0.3);
+  --font-neon-big-icon-shadow:
+    0 0 5px #025ac94d, 0 0 10px rgba(2, 90, 201, 0.3),
+    0 0 15px rgba(2, 90, 201, 0.3), 0 0 20px rgba(2, 90, 201, 0.3),
+    0 0 35px rgba(2, 90, 201, 0.3), 0 0 40px rgba(2, 90, 201, 0.3),
+    0 0 75px rgba(2, 90, 201, 0.3), 0 0 100px rgba(2, 90, 201, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
     #02e1ff 0%,
@@ -55,6 +60,7 @@
   --hover-color: #03ad50;
   --hero-bg-color: #03ad50;
   --bg-color: #c7ffe1;
+  --home-bg-color: #c7ffe1;
   --header-bg-color: #c7ffe1b6;
   --menu-bg-color: #c7ffe1c8;
   --secon-bg-color: #e8ffe7;
@@ -77,6 +83,11 @@
     0 0 30px rgba(2, 201, 90, 0.3), 0 0 40px rgba(2, 201, 90, 0.3),
     0 0 70px rgba(2, 201, 90, 0.3), 0 0 80px rgba(2, 201, 90, 0.3),
     0 0 100px rgba(2, 201, 90, 0.3), 0 0 150px rgba(2, 201, 90, 0.3);
+  --font-neon-big-icon-shadow:
+    0 0 5px rgba(2, 201, 90, 0.3), 0 0 10px rgba(2, 201, 90, 0.3),
+    0 0 15px rgba(2, 201, 90, 0.3), 0 0 20px rgba(2, 201, 90, 0.3),
+    0 0 35px rgba(2, 201, 90, 0.3), 0 0 40px rgba(2, 201, 90, 0.3),
+    0 0 75px rgba(2, 201, 90, 0.3), 0 0 100px rgba(2, 201, 90, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
     #3fc002 0%,
@@ -93,6 +104,7 @@
   --hero-bg-color: #5a02c9;
   --secon-bg-color: #cdc6df;
   --bg-color: #beafe0;
+  --home-bg-color: #beafe0;
   --menu-bg-color: #beafe0c8;
   --header-bg-color: #beafe0b6;
   --mail-bg-color: #180035;
@@ -114,6 +126,11 @@
     0 0 30px rgba(90, 2, 201, 0.3), 0 0 40px rgba(90, 2, 201, 0.3),
     0 0 70px rgba(90, 2, 201, 0.3), 0 0 80px rgba(90, 2, 201, 0.3),
     0 0 100px rgba(90, 2, 201, 0.3), 0 0 150px rgba(90, 2, 201, 0.3);
+  --font-neon-big-icon-shadow:
+    0 0 5px rgba(90, 2, 201, 0.3), 0 0 10px rgba(90, 2, 201, 0.3),
+    0 0 15px rgba(90, 2, 201, 0.3), 0 0 20px rgba(90, 2, 201, 0.3),
+    0 0 35px rgba(90, 2, 201, 0.3), 0 0 40px rgba(90, 2, 201, 0.3),
+    0 0 75px rgba(90, 2, 201, 0.3), 0 0 100px rgba(90, 2, 201, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
     #a786f5 0%,
@@ -129,6 +146,7 @@
   --hover-color: #ff5e00;
   --hero-bg-color: #ff5e00;
   --bg-color: #ffdaa2;
+  --home-bg-color: #ffdaa2;
   --header-bg-color: #ffdaa2b6;
   --menu-bg-color: #ffdaa2c8;
   --secon-bg-color: #ffefd6;
@@ -151,6 +169,11 @@
     0 0 30px rgba(255, 94, 0, 0.3), 0 0 40px rgba(255, 94, 0, 0.3),
     0 0 70px rgba(255, 94, 0, 0.3), 0 0 80px rgba(255, 94, 0, 0.3),
     0 0 100px rgba(255, 94, 0, 0.3), 0 0 150px rgba(255, 94, 0, 0.3);
+  --font-neon-big-icon-shadow:
+    0 0 5px rgba(255, 94, 0, 0.302), 0 0 10px rgba(255, 94, 0, 0.3),
+    0 0 15px rgba(255, 94, 0, 0.3), 0 0 20px rgba(255, 94, 0, 0.3),
+    0 0 35px rgba(255, 94, 0, 0.3), 0 0 40px rgba(255, 94, 0, 0.3),
+    0 0 75px rgba(255, 94, 0, 0.3), 0 0 100px rgba(255, 94, 0, 0.3);
   --gradient-coler-bg: linear-gradient(
     180deg,
     #ffa500 0%,

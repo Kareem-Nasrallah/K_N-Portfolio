@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./about.css";
 import Hero from "../../Components/Hero";
 import Card from "../../Components/Card";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 const About = () => {
   const careerShiftRef = useRef(null);
@@ -34,6 +35,27 @@ const About = () => {
     },
   ];
 
+  const [searchParams] = useSearchParams();
+
+  const chapter = Number(searchParams.get("ch")) || 1;
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "instant",
+          block: "start",
+        });
+        setSelectedChapter(chapter);
+        console.log("chapter: ", chapter);
+        console.log("selectedChapter: ", selectedChapter);
+      }
+    }
+  }, [location.hash, chapter]);
+
   useEffect(() => {
     careerShiftRef.current?.classList.add("show-items");
     ownershipContRef.current?.classList.add("show-items");
@@ -54,7 +76,7 @@ const About = () => {
       />
 
       <main id="about">
-        <section className="about-content bg-(--secon-bg-color)">
+        <section id="journey" className="about-content bg-(--secon-bg-color)">
           <div ref={careerShiftRef} className="fromright">
             <span>MY JOURNEY</span>
 
@@ -256,7 +278,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="about-content">
+        <section id="education" className="about-content">
           <h2 className="text-center">
             <span>Education & Learning</span>
           </h2>
@@ -264,7 +286,7 @@ const About = () => {
             Learned. Learning. Always evolving. Because the moment I stop
             growing, I stop moving forward.
           </p>
-          <div className="flex justify-between items-stretch gap-5 mt-6">
+          <div className="flex justify-between items-stretch gap-5 mt-8!">
             {myEducation.map((education) => (
               <Card key={education.title} education={education} />
             ))}

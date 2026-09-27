@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import Point from "../../Components/Point";
+import Point from "@/Components/Point";
 
-const WorkExperiencesSec = () => {
+const MyJourney = () => {
   const navigate = useNavigate();
 
   const lifePoints = [
@@ -38,9 +38,9 @@ const WorkExperiencesSec = () => {
   ];
 
   return (
-    <section>
+    <section className="bg-(--secon-bg-color)">
       <h2 className="sectionTitle">
-        <span>Life Experience</span>
+        <span>my Journey</span>
       </h2>
       <div className="mt-12! relative">
         <div className="absolute right-[50%] top-0 translate-x-[50%] mt-4 w-1 h-[calc(100%-48px)] z-50 bg-(--hover-color)/20"></div>
@@ -66,4 +66,4 @@ const WorkExperiencesSec = () => {
   );
 };
 
-export default WorkExperiencesSec;
+export default MyJourney;

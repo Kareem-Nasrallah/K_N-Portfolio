@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
-import CanvasMyPhoto from "../../Components/CanvasMyPhoto";
+import CanvasMyPhoto from "@/Components/CanvasMyPhoto";
 import "./home.css";
-import WorkExperiencesSec from "./WorkExperiencesSec";
+import MyJourney from "@/Components/Home/MyJourney";
+import WorkExperienceSec from "@/Components/Home/WorkExperienceSec";
 
 const Home = () => {
   const homeImgRef = useRef(null);
@@ -60,7 +61,8 @@ const Home = () => {
           <CanvasMyPhoto />
         </div>
       </section>
-      <WorkExperiencesSec />
+      <MyJourney />
+      <WorkExperienceSec/>
     </>
   );
 };

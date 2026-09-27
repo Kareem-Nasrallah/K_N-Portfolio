@@ -1,8 +1,8 @@
-import Mbalfa from "../../Components/work experience/Mbalfa";
-import IcomGroup from "../../Components/work experience/IcomGroup";
+import Mbalfa from "@/Components/work-experience/Mbalfa";
+import IcomGroup from "@/Components/work-experience/IcomGroup";
 import { useEffect, useRef, useState } from "react";
 import "./workEx.css";
-import Hero from "../../Components/Hero";
+import Hero from "@/Components/Hero";
 
 const WorkExperience = () => {
   const [idClicked, setIdClicked] = useState(null);
@@ -20,9 +20,15 @@ const WorkExperience = () => {
 
   return (
     <>
-      <Hero title={"Work Experience"} bgImage={'./headers/workExperience.png'}/>
+      <Hero
+        title={"Work Experience"}
+        bgImage={"./headers/workExperience.png"}
+      />
       <section id="workEx">
         <div className="experience">
+          <h2 className="sectionTitle mt-0! mb-8!">
+            <span>Where I've Worked</span>
+          </h2>
           <div className="job-experience items-stretch">
             {/* MB ALFA */}
             <div ref={mbalfa} className="fromlift flex flex-col flex-1">

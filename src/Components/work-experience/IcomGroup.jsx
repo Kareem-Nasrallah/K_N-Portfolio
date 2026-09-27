@@ -1,31 +1,36 @@
 import AccordionElement from "./accordionElement";
 
-const Mbalfa = ({ idClicked, setIdClicked }) => {
-  const mbalfaTecniqalUsed = [
-    "React",
-    "Typescript",
-    "Redux Toolkit",
-    "Formik",
-    "Yup",
-    "Tailwindcss",
-    "Shadcn/ui",
-    "Git & GitLab",
+const IcomGroup = ({ idClicked, setIdClicked }) => {
+  const icomTecniqalUsed = [
+    "HTML",
+    "Javascript",
+    "CSS",
+    "WordPress",
+    "Elementor",
   ];
 
   return (
     <div
       className={`job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:bg-gray-300/50 flex-1 
-    ${typeof idClicked === "string" && idClicked.includes("mbalfa") ? "border-(--hover-color) bg-gray-300/50" : "border-blue-900 bg-gray-300"}`}
+    ${typeof idClicked === "string" && idClicked.includes("icom") ? "border-(--hover-color) bg-gray-300/50" : "border-(--points-color) bg-gray-300"}`}
     >
       <div className="flex gap-4 items-start">
-        <img
-          src="/company logos/mb-alfa Logo.png"
-          alt="mb-alfa Logo"
-          className="h-14"
-        />
+        <div className="bg-black px-2 h-15 rounded-lg overflow-hidden flex justify-center items-center">
+          <img
+            src="/company-logos/Media-Creation-Logo.svg"
+            alt="Media Creation Logo"
+            className="w-20"
+          />
+        </div>
         <div>
-          <h3 className="text-xl font-semibold">MB ALFA</h3>
-          <p className="mb-2">(April 2025 – November 2025)</p>
+          <h3 className="text-xl font-semibold">ICOM group - Media Creation</h3>
+          <p className="mb-2">
+            ( March 2026 -{" "}
+            <strong className="text-(--hover-color)! font-semibold">
+              Present
+            </strong>{" "}
+            )
+          </p>
         </div>
       </div>
 
@@ -38,7 +43,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
           content={
             "MB ALFA developed an ERP platform for restaurant management, providing restaurants with tools to manage their operations while allowing their customers to reserve tables, order food, and make payments through the same platform."
           }
-          id={"mbalfa-company"}
+          id={"icom-company"}
           idClicked={idClicked}
           setIdClicked={setIdClicked}
         />
@@ -48,7 +53,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
           title={"My Responsibilities"}
           subtitle={"What I worked on as a Front-End Developer"}
           content={
-            <ul className="space-y-4 text-gray-600 leading-7 list-disc list-outside pl-5">
+            <ul className="space-y-3 text-gray-600 leading-7 list-disc list-inside">
               <li>
                 Developed and maintained frontend features using React and
                 TypeScript, taking ownership of challenging and unfamiliar tasks
@@ -78,7 +83,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
               </li>
             </ul>
           }
-          id={"mbalfa-responsibilities"}
+          id={"icom-responsibilities"}
           idClicked={idClicked}
           setIdClicked={setIdClicked}
         />
@@ -90,7 +95,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
           content={
             "Working within a very small Front-End team gave me significant ownership over the development process. I frequently handled challenging or unfamiliar requirements independently, which pushed me to research, learn new technologies and approaches, and find effective solutions with minimal supervision."
           }
-          id={"mbalfa-growth"}
+          id={"icom-growth"}
           idClicked={idClicked}
           setIdClicked={setIdClicked}
         />
@@ -100,7 +105,7 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
         <strong>Technologies used:</strong>
         <br />
         <ui>
-          {mbalfaTecniqalUsed.map((tech, index) => (
+          {icomTecniqalUsed.map((tech, index) => (
             <li
               className="list-none inline-block m-1 py-1 px-2 text-sm rounded-full"
               style={{
@@ -118,4 +123,4 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
   );
 };
 
-export default Mbalfa;
+export default IcomGroup;

@@ -2,17 +2,17 @@ import AccordionElement from "./accordionElement";
 
 const IcomGroup = ({ idClicked, setIdClicked }) => {
   const icomTecniqalUsed = [
+    "WordPress",
+    "Elementor",
     "HTML",
     "Javascript",
     "CSS",
-    "WordPress",
-    "Elementor",
   ];
 
   return (
     <div
-      className={`job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:bg-gray-300/50 flex-1 
-    ${typeof idClicked === "string" && idClicked.includes("icom") ? "border-(--hover-color) bg-gray-300/50" : "border-(--points-color) bg-gray-300"}`}
+      className={`ms-auto w-full sm:w-[85%] md:w-[75%] job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-(--text-simi-ten-color)/10 flex-1 
+    ${typeof idClicked === "string" && idClicked.includes("icom") ? "border-(--hover-color) bg-(--text-simi-ten-color)/10 shadow-2xl" : "border-(--points-color) bg-(--text-simi-ten-color)/15"}`}
     >
       <div className="flex gap-4 items-start">
         <div className="bg-black px-2 h-15 rounded-lg overflow-hidden flex justify-center items-center">

@@ -1,5 +1,6 @@
 :root {
   --text-color: #001a44;
+  --hover-title: #01499f;
   --prtfolio-hover-color: linear-gradient(rgba(0, 0, 0, 0.4), #001a44);
   --text-porto-color: #01e1ff;
   --text-simi-ten-color: #232f42;
@@ -54,6 +55,7 @@
 /* ///////////////  all colors versions  /////////////// */
 .green {
   --text-color: #012107;
+  --hover-title: #02672c;
   --prtfolio-hover-color: linear-gradient(rgba(0, 0, 0, 0.4), #012107);
   --text-porto-color: #00ff80;
   --text-simi-ten-color: #244b36;
@@ -97,6 +99,7 @@
 }
 .purple {
   --text-color: #220249;
+  --hover-title: #3e0289;
   --prtfolio-hover-color: linear-gradient(rgba(0, 0, 0, 0.4), #220249);
   --text-porto-color: rgb(196, 151, 255);
   --text-simi-ten-color: #34056d;
@@ -140,6 +143,7 @@
 }
 .orange {
   --text-color: #4d2f06;
+  --hover-title: #a64603;
   --prtfolio-hover-color: linear-gradient(rgba(0, 0, 0, 0.4), #4d2f06);
   --text-porto-color: #ffbb00;
   --text-simi-ten-color: #69592d;
@@ -185,6 +189,7 @@
   --hover-color: #0099ff;
   --hero-bg-color: #025ac9;
   --text-color: #0357dd;
+  --hover-title: #0278ee;
   --prtfolio-hover-color: linear-gradient(
     rgba(0, 0, 0, 0.4),
     hsl(217, 97%, 30%)
@@ -192,6 +197,7 @@
 }
 .green.dark {
   --text-color: #1b902e;
+  --hover-title: #0ec828;
   --prtfolio-hover-color: linear-gradient(
     rgba(0, 0, 0, 0.4),
     hsl(130, 68%, 20%)
@@ -201,6 +207,7 @@
 }
 .orange.dark {
   --text-color: #bd6e00;
+  --hover-title: #de941c;
   --prtfolio-hover-color: linear-gradient(
     rgba(0, 0, 0, 0.4),
     hsl(35, 100%, 27%)
@@ -210,6 +217,7 @@
 }
 .purple.dark {
   --text-color: #5300b9;
+  --hover-title: #721adc;
   --prtfolio-hover-color: linear-gradient(
     rgba(0, 0, 0, 0.4),
     hsl(267, 100%, 26%)

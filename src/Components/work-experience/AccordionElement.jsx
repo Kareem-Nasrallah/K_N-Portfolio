@@ -10,7 +10,7 @@ const AccordionElement = ({
     <div
       className={
         "border border-white/70 rounded-xl overflow-hidden transition-all duration-500 " +
-        (idClicked === id ? "max-h-[600px] shadow-lg bg-gray-200/50" : "max-h-20")
+        (idClicked === id ? "max-h-[600px] shadow-lg bg-gray-200/50" : "max-h-26 sm:max-h-20")
       }
     >
       <button

@@ -14,8 +14,8 @@ const Mbalfa = ({ idClicked, setIdClicked }) => {
 
   return (
     <div
-      className={`job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:bg-gray-300/50 flex-1 
-    ${typeof idClicked === "string" && idClicked.includes("mbalfa") ? "border-(--hover-color) bg-gray-300/50" : "border-(--points-color) bg-gray-300"}`}
+      className={`w-full sm:w-[85%] md:w-[75%] job mb-4 border-4 hover:border-(--hover-color) p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-(--text-simi-ten-color)/10 flex-1 
+    ${typeof idClicked === "string" && idClicked.includes("mbalfa") ? "border-(--hover-color) bg-(--text-simi-ten-color)/10 shadow-2xl" : "border-(--points-color) bg-(--text-simi-ten-color)/15"}`}
     >
       <div className="flex gap-4 items-start">
         <img

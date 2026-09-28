@@ -54,7 +54,7 @@ const Skills = () => {
             Application Tools
           </button>
         </div>
-        <div className="h-[540px] w-[60vw]z-10 relative  flex justify-center items-center ">
+        <div className="h-[500px] w-[60vw]z-10 relative  flex justify-center items-center ">
           <Skill />
           <div
             className="movingParent w-[780px] h-[780px] border-2 border-[#00000030] rounded-full absolute top-0 left-[50%] -translate-x-[50%]  flex justify-center items-center"

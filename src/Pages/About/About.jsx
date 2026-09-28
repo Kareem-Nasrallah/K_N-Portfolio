@@ -45,13 +45,7 @@ const About = () => {
       const element = document.getElementById(location.hash.substring(1));
 
       if (element) {
-        element.scrollIntoView({
-          behavior: "instant",
-          block: "start",
-        });
         setSelectedChapter(chapter);
-        console.log("chapter: ", chapter);
-        console.log("selectedChapter: ", selectedChapter);
       }
     }
   }, [location.hash, chapter]);

@@ -16,19 +16,11 @@
 .job-experience {
   display: flex;
   gap: 4rem;
-  justify-content: space-between;
-  align-items: stretch;
 }
 .job{
   transition: all 0.5s;
 }
 
-@media (max-width: 1220px) {
-  .job-experience {
-    align-items: stretch;
-    margin-top: 4rem;
-  }
-}
 
 @media (max-width: 780px) {
   #workEx {

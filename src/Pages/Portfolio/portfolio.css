@@ -27,60 +27,57 @@
   gap: 2rem;
 }
 .port-box {
-  min-height: 11.5rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
   border: 2px solid var(--hover-color);
+  border-radius: 16px;
+  overflow: hidden;
   box-shadow: var(--neon-box-shadow);
   position: relative;
-}
-.port-image {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  flex-direction: column;
 }
 .port-box:hover img {
   transform: scale(1.2);
 }
+.port-image{
+  height: 14.5rem;
+  overflow: hidden;
+  position: relative;
+}
 .port-image img {
-  width: 100%;
   height: 100%;
-  opacity: 0.5s;
+  width: 100%;
+  object-fit: cover;
   transition: 0.5s;
+  z-index: 1;
+}
+.port-image::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--prtfolio-hover-color);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.port-box:hover .port-image::after {
+  opacity: 0.5;
 }
 .port-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background: var(--prtfolio-hover-color);
+  background: var(--text-color);
   backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  transition: 0.5s;
-  padding: 0 2rem;
-}
-.port-box:hover .port-content {
-  opacity: 1;
+  flex-grow: 1;
+  padding: 1rem 2rem;
 }
 .port-content h3 {
   font-size: var(--h3-font);
   font-weight: 600;
   color: var(--text-porto-color);
-  margin-bottom: 5px;
 }
 .port-content p {
   color: var(--text-porto-color);
-  font-size: 0.8rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
 }
 .port-content p b{
   color: var(--text-porto-color);
@@ -89,7 +86,8 @@
 .port-content a {
   background: var(--secon-bg-color);
   border-radius: 50%;
-  margin: 10px 10px;
+  margin: 10px 20px 10px 0px;
+  background: #fff;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +98,7 @@
   box-shadow: var(--hover-box-shadow);
 }
 .port-content a i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--text-color);
 }
 

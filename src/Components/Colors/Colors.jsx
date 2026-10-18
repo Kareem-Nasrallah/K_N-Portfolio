@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./colors.css";
+import "./colorPalette.css";
 
 const Colors = () => {
   const allColors = [

@@ -3,6 +3,7 @@ import CanvasMyPhoto from "@/Components/CanvasMyPhoto";
 import "./home.css";
 import MyJourney from "@/Components/Home/MyJourney";
 import WorkExperienceSec from "@/Components/Home/WorkExperienceSec";
+import PortofolioSec from "../../Components/Home/PortofolioSec";
 
 const Home = () => {
   const homeImgRef = useRef(null);
@@ -62,7 +63,8 @@ const Home = () => {
         </div>
       </section>
       <MyJourney />
-      <WorkExperienceSec/>
+      <WorkExperienceSec />
+      <PortofolioSec />
     </>
   );
 };

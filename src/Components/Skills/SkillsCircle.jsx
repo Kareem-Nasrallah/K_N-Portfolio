@@ -34,7 +34,7 @@ const SkillsCircle = ({ spiner, justSpine }) => {
           }}
           key={skillInfo.name}
           onClick={() => {
-            dispatch(selectSkill(skillInfo));
+            dispatch(selectSkill(skillInfo.id));
           }}
         >
           <span className={`after after-${skillInfo.parintClass}`}>
@@ -56,7 +56,7 @@ const SkillsCircle = ({ spiner, justSpine }) => {
           }}
           key={skillInfo.name}
           onClick={() => {
-            dispatch(selectSkill(skillInfo));
+            dispatch(selectSkill(skillInfo.id));
           }}
         >
           <span className={`after after-${skillInfo.parintClass}`}>
@@ -78,8 +78,7 @@ const SkillsCircle = ({ spiner, justSpine }) => {
           }}
           key={skillInfo.name}
           onClick={() => {
-            dispatch(selectSkill(skillInfo));
-            console.log(selectedSkill);
+            dispatch(selectSkill(skillInfo.id));
           }}
         >
           <span className={`after after-${skillInfo.parintClass}`}>

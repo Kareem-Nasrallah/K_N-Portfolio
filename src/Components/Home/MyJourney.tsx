@@ -42,41 +42,52 @@ const MyJourney = () => {
       <h2 className="sectionTitle">
         <span>my Journey</span>
       </h2>
-      <div className="mt-12! relative">
-        <div className="absolute left-0 sm:left-[50%] top-0 sm:translate-x-[-50%] mt-4 w-1 h-[calc(100%-78px)] md:h-[calc(100%-48px)] z-50 bg-(--hover-color)/20"></div>
+      <div className="pt-10 ps-10 sm:ps:0">
+        <div className="relative">
+          <div className="absolute left-0 sm:left-[50%] top-0 sm:translate-x-[-50%] mt-4 w-1 h-[calc(90%-30px)] sm:h-[calc(100%-86px)] md:h-[calc(100%-58px)] z-50 bg-(--hover-color)/20"></div>
 
-        {lifePoints.map((point, i) => (
-          <div className="relative h-20 md:h-14" key={point.title}>
+          {lifePoints.map((point, i) => (
             <div
-              className={`flex items-start md:items-center absolute cursor-pointer group
-          ${
-            i % 2 === 0
-              ? "flex-row left-0 translate-x-[3.5px] sm:right-[50%] sm:left-auto sm:translate-x-[3.5px]"
-              : "flex-row-reverse left-0 translate-x-[3.5px] sm:left-[50%] sm:translate-x-[-3.5px]"
-          }`}
+              className={`relative h-22 md:h-18 lg:h-16 
+            ${point.id === "?ch=1#journey" && "h-22! lg:pt-3"}
+            `}
+              key={point.title}
             >
               <div
-                className={`flex gap-0 md:gap-3 relative after:absolute mx-4
-            after:right-0 after:-bottom-1 after:h-[3px] after:w-0
-            after:bg-(--hover-color) after:content-['']
-            after:transition-all after:duration-400 group-hover:after:w-full
+                className={`flex items-start md:items-center absolute cursor-pointer group -ms-[5px] sm:ms-0
+          ${
+            i % 2 === 0
+              ? "flex-row-reverse sm:flex-row left-0 translate-x-[3.5px] sm:right-[50%] sm:left-auto sm:translate-x-[3.5px]"
+              : "flex-row-reverse left-0 translate-x-[3.5px] sm:left-[50%] sm:translate-x-[-3.5px]"
+          }
+            ${point.id === "?ch=1#journey" && " items-start! "}`}
+              >
+                <div
+                  className={`flex justify-center gap-0 md:gap-3 relative after:absolute mx-4 after:-bottom-1 after:h-[3px] after:w-0 after:bg-(--hover-color) after:content-[''] after:transition-all after:duration-400 group-hover:after:w-full
             ${
               i % 2 === 0
-                ? "items-end flex-col-reverse md:flex-row md:items-center"
-                : "items-start flex-col-reverse md:flex-row-reverse md:items-center"
+                ? "items-start sm:items-end flex-col-reverse md:flex-row md:items-center after:right-0"
+                : "items-start flex-col-reverse md:flex-row-reverse md:items-center after:left-0"
+            }
+            ${
+              point.id === "?ch=1#journey" &&
+              " flex-col-reverse! items-start! gap-0!"
             }`}
-              >
-                <b className="text-sm hover:text-(--text-color)/85!">
-                  ({point.date})
-                </b>
+                >
+                  <b className="text-sm hover:text-(--text-color)/85!">
+                    ({point.date})
+                  </b>
 
-                <h3 className="hover:text-(--text-color)/85!">{point.title}</h3>
+                  <h3 className="hover:text-(--text-color)/85!">
+                    {point.title}
+                  </h3>
+                </div>
+
+                <Point pointId={point.id} />
               </div>
-
-              <Point />
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

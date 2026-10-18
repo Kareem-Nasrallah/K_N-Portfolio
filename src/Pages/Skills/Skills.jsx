@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./skills.css";
-import Hero from "../../Components/Hero";
-import SkillsCircle from "./SkillsCircle";
-import Skill from "./Skill";
+import Hero from "@/Components/Hero";
+import SkillsCircle from "@/Components/Skills/SkillsCircle";
+import Skill from "@/Components/Skills/Skill";
 
 const Skills = () => {
   const [spiner, setSpinner] = useState("all");

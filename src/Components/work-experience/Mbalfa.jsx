@@ -1,4 +1,4 @@
-import AccordionElement from "./accordionElement";
+import AccordionElement from "./AccordionElement";
 
 const Mbalfa = ({ idClicked, setIdClicked }) => {
   const mbalfaTecniqalUsed = [

@@ -1,4 +1,4 @@
-import AccordionElement from "./accordionElement";
+import AccordionElement from "./AccordionElement";
 
 const IcomGroup = ({ idClicked, setIdClicked }) => {
   const icomTecniqalUsed = [

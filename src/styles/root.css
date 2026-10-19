@@ -8,11 +8,9 @@
   --hero-bg-color: #025ac9;
   --bg-color: #c3d9ff;
   --home-bg-color: #a5cfe5;
-  /* --bg-color: #a5cfe5; */
   --header-bg-color: #a5cfe5b6;
   --menu-bg-color: #a5cfe5c8;
   --secon-bg-color: #e0edff;
-  /* --secon-bg-color: #cce0ff; */
   --mail-bg-color: #003;
   --card-bg: #02e1ff12;
   --card-hover-bg: #02e1ff32;
@@ -62,10 +60,10 @@
   --hover-color: #03ad50;
   --hero-bg-color: #03ad50;
   --bg-color: #c7ffe1;
-  --home-bg-color: #c7ffe1;
+  --home-bg-color: #cfffe9;
   --header-bg-color: #c7ffe1b6;
   --menu-bg-color: #c7ffe1c8;
-  --secon-bg-color: #e8ffe7;
+  --secon-bg-color: #f1ffef;
   --mail-bg-color: #020;
   --neon-social: 0 0 5px #02c95a;
   --card-bg: #17ff0212;
@@ -226,6 +224,7 @@
   --hero-bg-color: #5a02c9;
 }
 .dark {
+  --home-bg-color: #000;
   --bg-color: #000;
   --header-bg-color: #000000b6;
   --menu-bg-color: #000000c8;
